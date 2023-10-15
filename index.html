@@ -97,11 +97,12 @@ cookieconsent.run({
 </style>
 <script>
   window.onload = function() {
-    if (sessionStorage.getItem("not_first_load") === null) {
+    if (localStorage.getItem("not_first_load") === null) {
       if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
         window.quartoToggleColorScheme();
+        window.localStorage.setItem("quarto-color-scheme", 'alternate');
       }
-    sessionStorage.setItem("not_first_load", true);
+    localStorage.setItem("not_first_load", true);
     }
     return false;
   };
