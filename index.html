@@ -91,21 +91,23 @@ cookieconsent.run({
 </script> 
   
 <style>#termsfeed-com---nb {display: none}</style>
+
 <style>.cc-pc-head-lang-select {
-  background-color:rgba(0, 0, 0, 0)
+    background-color:rgba(0, 0, 0, 0)
   }
 </style>
+
 <script>
-  window.onload = function() {
-    if (localStorage.getItem("not_first_load") === null) {
-      if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-        window.quartoToggleColorScheme();
-        window.localStorage.setItem("quarto-color-scheme", 'alternate');
-      }
-    localStorage.setItem("not_first_load", true);
+window.onload = function() {
+  if (localStorage.getItem("not_first_load") === null) {
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+      window.quartoToggleColorScheme();
+      window.localStorage.setItem("quarto-color-scheme", 'alternate');
     }
-    return false;
-  };
+    localStorage.setItem("not_first_load", true);
+  }
+  return false;
+};
 </script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
