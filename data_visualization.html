@@ -121,11 +121,21 @@ cookieconsent.run({
 });
 </script> 
   
-<style>#termsfeed-com---nb {display: none}</style>
-<style>.cc-pc-head-lang-select {
+<style>
+#termsfeed-com---nb {display: none}
+</style>
+<style>
+.cc-pc-head-lang-select {
     background-color:rgba(0, 0, 0, 0)
   }
 </style>
+<script>
+window.onload = function() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    window.quartoToggleColorScheme()
+  }
+};
+</script>
 
   <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
   <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>

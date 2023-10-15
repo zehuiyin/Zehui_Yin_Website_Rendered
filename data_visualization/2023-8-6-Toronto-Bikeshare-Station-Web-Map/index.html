@@ -93,11 +93,21 @@ cookieconsent.run({
 });
 </script> 
   
-<style>#termsfeed-com---nb {display: none}</style>
-<style>.cc-pc-head-lang-select {
+<style>
+#termsfeed-com---nb {display: none}
+</style>
+<style>
+.cc-pc-head-lang-select {
     background-color:rgba(0, 0, 0, 0)
   }
 </style>
+<script>
+window.onload = function() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    window.quartoToggleColorScheme()
+  }
+};
+</script>
 
 
 <link rel="stylesheet" href="../../styles.css">
