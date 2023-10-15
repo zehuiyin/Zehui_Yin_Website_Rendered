@@ -128,6 +128,17 @@ cookieconsent.run({
   }
 </style>
 
+<style>
+* {
+  animation: cssAnimation 0s 0.5s forwards;
+  visibility: hidden;
+}
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+</style>
+
 <script>
 window.onload = function() {
   if (localStorage.getItem("not_first_load") === null) {
