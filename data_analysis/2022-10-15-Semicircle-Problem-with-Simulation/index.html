@@ -146,16 +146,12 @@ cookieconsent.run({
 </style>
 
 <script>
-window.onload = function() {
-  if (localStorage.getItem("not_first_load") === null) {
-    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
-      window.quartoToggleColorScheme();
-      window.localStorage.setItem("quarto-color-scheme", 'alternate');
-    }
-    localStorage.setItem("not_first_load", true);
+if (localStorage.getItem("not_first_load") === null) {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    window.localStorage.setItem("quarto-color-scheme", 'alternate');
   }
-  return false;
-};
+  localStorage.setItem("not_first_load", true);
+}
 </script>
 
 
