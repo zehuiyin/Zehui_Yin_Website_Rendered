@@ -90,24 +90,35 @@ cookieconsent.run({
 });
 </script> 
   
+<!--
+Hide cookie consent
+-->
 <style>#termsfeed-com---nb {display: none}</style>
 
+<!--
+Fix cookie consent window dark background in dark mode
+-->
 <style>.cc-pc-head-lang-select {
     background-color:rgba(0, 0, 0, 0)
   }
 </style>
 
+<!--
+Hide everything before page load (fix flashing)
+-->
 <style>
-* {
-  animation: cssAnimation 0s 0.1s forwards;
-  visibility: hidden;
-}
-
-@keyframes cssAnimation {
-  to   { visibility: visible; }
-}
+html { visibility:hidden; }
 </style>
 
+<script>
+window.onload = function() {
+  document.getElementsByTagName("html")[0].style.visibility = "visible";
+}
+</script>
+
+<!--
+Store user's defult mode (light or dark) in the first load
+-->
 <script>
 if (localStorage.getItem("not_first_load") === null) {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
