@@ -107,17 +107,18 @@ Fix cookie consent window dark background in dark mode
 </style>
 
 <!--
-Hide everything before page load (fix flashing)
+Hide everything for 0.1s (fix flashing)
 -->
 <style>
-html { visibility:hidden; }
-</style>
-
-<script>
-window.onload = function() {
-  document.getElementsByTagName("html")[0].style.visibility = "visible";
+* {
+  animation: cssAnimation 0s 0.1s forwards;
+  visibility: hidden;
 }
-</script>
+
+@keyframes cssAnimation {
+  to   { visibility: visible; }
+}
+</style>
 
 <!--
 Store user's defult mode (light or dark) in the first load
