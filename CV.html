@@ -271,10 +271,10 @@ if (localStorage.getItem("not_first_load") === null) {
 <style>
 .embed-container {
     position: relative;
-    padding-bottom: 130%;
+    padding-bottom: 112%;
     height: 0;
     overflow: hidden;
-    max-width: 100%;
+    max-width: 89%;
 }
 .embed-container iframe,
 .embed-container object,
@@ -282,15 +282,15 @@ if (localStorage.getItem("not_first_load") === null) {
     position: absolute;
     top: 0;
     left: 0;
-    width: 85%;
-    height: 82.5%;
+    width: 100%;
+    height: 100%;
 }
 </style>
 <p class="text-left">
 <a class="btn btn-primary btn-lg cv-download" href="./files/CV.pdf" target="_blank"> <i class="fa-solid fa-file-arrow-down"></i> Download current CV </a>
 </p>
 <div class="embed-container">
-<p><iframe src="./files/CV.pdf#toolbar=0" style="border: 0.5px"></iframe></p>
+<p><iframe frameborder="0" marginheight="0" marginwidth="0" title="CV" src="./files/CV.pdf#toolbar=0"></iframe></p>
 </div>
 
 
