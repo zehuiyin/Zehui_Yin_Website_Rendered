@@ -352,7 +352,7 @@ if (localStorage.getItem("not_first_load") === null) {
 \end{array}
 \]</span> Due to the endogeneity issues, the OLS estimate for the following regression would produce biased estimate for <span class="math inline">\(\hat{\rho}\)</span>.</p>
 <p><span class="math display">\[
-y_t=\hat{\rho}y_{t-1}+\epsilon_t
+y_t=\hat{\beta}_0+\hat{\rho}y_{t-1}+\epsilon_t
 \]</span></p>
 <p>To generate data from this process and carry out estimation, I use the following R code:</p>
 <div class="cell">
