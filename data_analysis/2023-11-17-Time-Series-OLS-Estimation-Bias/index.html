@@ -367,7 +367,7 @@ y_t=\hat{\beta}_0+\hat{\rho}y_{t-1}+\epsilon_t
 <span id="cb2-8"><a href="#cb2-8" aria-hidden="true" tabindex="-1"></a>    <span class="fu">colnames</span>(df) <span class="ot">&lt;-</span> <span class="fu">gsub</span>(<span class="st">"-"</span>, <span class="st">"_"</span>, <span class="fu">paste0</span>(<span class="st">"rho"</span>, rho))</span>
 <span id="cb2-9"><a href="#cb2-9" aria-hidden="true" tabindex="-1"></a>    </span>
 <span id="cb2-10"><a href="#cb2-10" aria-hidden="true" tabindex="-1"></a>    <span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">length</span>(rho)) {</span>
-<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      df[<span class="dv">1</span>,] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="fu">length</span>(rho))</span>
+<span id="cb2-11"><a href="#cb2-11" aria-hidden="true" tabindex="-1"></a>      df[<span class="dv">1</span>, i] <span class="ot">&lt;-</span> <span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
 <span id="cb2-12"><a href="#cb2-12" aria-hidden="true" tabindex="-1"></a>      <span class="cf">for</span>(j <span class="cf">in</span> <span class="dv">2</span><span class="sc">:</span>n) {</span>
 <span id="cb2-13"><a href="#cb2-13" aria-hidden="true" tabindex="-1"></a>        df[j, i] <span class="ot">&lt;-</span> rho[i]<span class="sc">*</span>df[j<span class="dv">-1</span>, i] <span class="sc">+</span> <span class="fu">rnorm</span>(<span class="dv">1</span>)</span>
 <span id="cb2-14"><a href="#cb2-14" aria-hidden="true" tabindex="-1"></a>      }</span>
