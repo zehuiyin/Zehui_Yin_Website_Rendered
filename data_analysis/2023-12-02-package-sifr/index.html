@@ -370,8 +370,8 @@ if (localStorage.getItem("not_first_load") === null) {
 <h1>Intro</h1>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(devtools)){</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>    <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>    <span class="fu">library</span>(devtools)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">install.packages</span>(<span class="st">"devtools"</span>)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(devtools)</span>
 <span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: devtools</code></pre>
@@ -380,17 +380,39 @@ if (localStorage.getItem("not_first_load") === null) {
 <pre><code>Loading required package: usethis</code></pre>
 </div>
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="cf">if</span>(<span class="sc">!</span><span class="fu">require</span>(sifr)){</span>
-<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>    devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"zehuiyin/sifr"</span>)</span>
-<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>  devtools<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"zehuiyin/sifr"</span>)</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">library</span>(sifr)</span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Loading required package: sifr</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sifr)</span>
-<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning in library(package, lib.loc = lib.loc, character.only = TRUE,
+logical.return = TRUE, : there is no package called 'sifr'</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Downloading GitHub repo zehuiyin/sifr@HEAD</code></pre>
+</div>
+<div class="cell-output cell-output-stdout">
+<pre><code>
+── R CMD build ─────────────────────────────────────────────────────────────────
+* checking for file 'C:\Users\zehui\AppData\Local\Temp\RtmpknXKcW\remotes6834a56782b\zehuiyin-sifr-6f5e03f/DESCRIPTION' ... OK
+* preparing 'sifr':
+* checking DESCRIPTION meta-information ... OK
+* checking for LF line-endings in source and make files and shell scripts
+* checking for empty or unneeded directories
+* building 'sifr_0.1.0.tar.gz'
+</code></pre>
+</div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Installing package into 'C:/Users/zehui/AppData/Local/R/win-library/4.2'
+(as 'lib' is unspecified)</code></pre>
+</div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Linking to GEOS 3.9.3, GDAL 3.5.2, PROJ 8.2.1; sf_use_s2() is TRUE</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>In this illustration, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM zone 18N (EPSG:26918).</p>
 </section>
@@ -398,8 +420,8 @@ if (localStorage.getItem("not_first_load") === null) {
 <h1>Load data</h1>
 <p>All types of School Locations in Toronto</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># school locations in Toronto</span></span>
-<span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a>schools <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/toronto_schools.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb13-1"><a href="#cb13-1" aria-hidden="true" tabindex="-1"></a><span class="co"># school locations in Toronto</span></span>
+<span id="cb13-2"><a href="#cb13-2" aria-hidden="true" tabindex="-1"></a>schools <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/toronto_schools.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `School locations-all types data - 4326' from data source 
   `https://github.com/zehuiyin/sifr/raw/main/extdata/toronto_schools.gpkg' 
@@ -410,16 +432,16 @@ Dimension:     XY
 Bounding box:  xmin: -79.61918 ymin: 43.59022 xmax: -79.13372 ymax: 43.83037
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
-<span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(schools) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
-<span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># for reproductivity</span></span>
-<span id="cb11-5"><a href="#cb11-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
-<span id="cb11-6"><a href="#cb11-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-7"><a href="#cb11-7" aria-hidden="true" tabindex="-1"></a><span class="co"># take a random 30 sample to simplify calculation as this is just a example</span></span>
-<span id="cb11-8"><a href="#cb11-8" aria-hidden="true" tabindex="-1"></a>schools <span class="ot">&lt;-</span> schools[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(schools), <span class="dv">30</span>),]</span>
-<span id="cb11-9"><a href="#cb11-9" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb11-10"><a href="#cb11-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb15-1"><a href="#cb15-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
+<span id="cb15-2"><a href="#cb15-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(schools) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
+<span id="cb15-3"><a href="#cb15-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-4"><a href="#cb15-4" aria-hidden="true" tabindex="-1"></a><span class="co"># for reproductivity</span></span>
+<span id="cb15-5"><a href="#cb15-5" aria-hidden="true" tabindex="-1"></a><span class="fu">set.seed</span>(<span class="dv">123</span>)</span>
+<span id="cb15-6"><a href="#cb15-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-7"><a href="#cb15-7" aria-hidden="true" tabindex="-1"></a><span class="co"># take a random 30 sample to simplify calculation as this is just a example</span></span>
+<span id="cb15-8"><a href="#cb15-8" aria-hidden="true" tabindex="-1"></a>schools <span class="ot">&lt;-</span> schools[<span class="fu">sample</span>(<span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(schools), <span class="dv">30</span>),]</span>
+<span id="cb15-9"><a href="#cb15-9" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb15-10"><a href="#cb15-10" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-49169abb3486349adfa5" style="width:100%;height:464px;"></div>
@@ -428,8 +450,8 @@ Geodetic CRS:  WGS 84</code></pre>
 </div>
 <p>Some variables of interest</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a><span class="co"># road intersections in Toronto</span></span>
-<span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a>intersections <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/centreline_intersection.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># road intersections in Toronto</span></span>
+<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>intersections <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/centreline_intersection.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `Centreline Intersection - 4326' from data source 
   `https://github.com/zehuiyin/sifr/raw/main/extdata/centreline_intersection.gpkg' 
@@ -440,11 +462,11 @@ Dimension:     XY
 Bounding box:  xmin: -79.63926 ymin: 43.581 xmax: -79.11545 ymax: 43.85545
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
-<span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(intersections) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
-<span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># road centrelines in Toronto</span></span>
-<span id="cb14-5"><a href="#cb14-5" aria-hidden="true" tabindex="-1"></a>roads <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/centreline.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
+<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(intersections) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
+<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># road centrelines in Toronto</span></span>
+<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>roads <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/extdata/centreline.gpkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `Centreline - Version 2 - 4326' from data source 
   `https://github.com/zehuiyin/sifr/raw/main/extdata/centreline.gpkg' 
@@ -455,14 +477,14 @@ Dimension:     XY
 Bounding box:  xmin: -79.63926 ymin: 43.5809 xmax: -79.11545 ymax: 43.85545
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
-<span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(roads) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
-<span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2021 Canadian census data</span></span>
-<span id="cb16-5"><a href="#cb16-5" aria-hidden="true" tabindex="-1"></a>census_data <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">url</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/data/census_data.rds"</span>, <span class="st">"rb"</span>))</span>
-<span id="cb16-6"><a href="#cb16-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb16-7"><a href="#cb16-7" aria-hidden="true" tabindex="-1"></a><span class="co"># land use data in Toronto</span></span>
-<span id="cb16-8"><a href="#cb16-8" aria-hidden="true" tabindex="-1"></a>landuse <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"/vsicurl/https://github.com/zehuiyin/sifr/raw/main/extdata/landuse.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
+<span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(roads) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
+<span id="cb20-3"><a href="#cb20-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-4"><a href="#cb20-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2021 Canadian census data</span></span>
+<span id="cb20-5"><a href="#cb20-5" aria-hidden="true" tabindex="-1"></a>census_data <span class="ot">&lt;-</span> <span class="fu">readRDS</span>(<span class="fu">url</span>(<span class="st">"https://github.com/zehuiyin/sifr/raw/main/data/census_data.rds"</span>, <span class="st">"rb"</span>))</span>
+<span id="cb20-6"><a href="#cb20-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb20-7"><a href="#cb20-7" aria-hidden="true" tabindex="-1"></a><span class="co"># land use data in Toronto</span></span>
+<span id="cb20-8"><a href="#cb20-8" aria-hidden="true" tabindex="-1"></a>landuse <span class="ot">&lt;-</span> <span class="fu">st_read</span>(<span class="st">"/vsicurl/https://github.com/zehuiyin/sifr/raw/main/extdata/landuse.shp"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>Reading layer `landuse' from data source 
   `/vsicurl/https://github.com/zehuiyin/sifr/raw/main/extdata/landuse.shp' 
@@ -478,20 +500,20 @@ Projected CRS: PCS_Lambert_Conformal_Conic</code></pre>
 <section id="calculate-number-of-intersections-within-300-meter-buffers-of-the-schools" class="level1">
 <h1>Calculate Number of Intersections within 300-meter buffers of the schools</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb18"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate what intersection falls within 300 meter buffers</span></span>
-<span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a>school_int_sec <span class="ot">&lt;-</span> <span class="fu">what_within_each_stops</span>(schools, intersections, <span class="dv">26918</span>, <span class="dv">300</span>)</span>
-<span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-4"><a href="#cb18-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create holder to record how many intersections falls within</span></span>
-<span id="cb18-5"><a href="#cb18-5" aria-hidden="true" tabindex="-1"></a>school_int_sec<span class="sc">$</span>input_rows_within_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
-<span id="cb18-6"><a href="#cb18-6" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-7"><a href="#cb18-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(school_int_sec)) { <span class="co"># loop over stop rows</span></span>
-<span id="cb18-8"><a href="#cb18-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">str_to_num</span>(i,<span class="st">"input_rows_within"</span>,school_int_sec))[<span class="dv">1</span>]){ <span class="co"># check whether there is intersection falls within</span></span>
-<span id="cb18-9"><a href="#cb18-9" aria-hidden="true" tabindex="-1"></a>    school_int_sec<span class="sc">$</span>input_rows_within_count[i] <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">str_to_num</span>(i,<span class="st">"input_rows_within"</span>,school_int_sec)) <span class="co"># record the number of intersections</span></span>
-<span id="cb18-10"><a href="#cb18-10" aria-hidden="true" tabindex="-1"></a>  }</span>
-<span id="cb18-11"><a href="#cb18-11" aria-hidden="true" tabindex="-1"></a>}</span>
-<span id="cb18-12"><a href="#cb18-12" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb18-13"><a href="#cb18-13" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>Rd_conn <span class="ot">&lt;-</span> school_int_sec<span class="sc">$</span>input_rows_within_count</span>
-<span id="cb18-14"><a href="#cb18-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"Rd_conn"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate what intersection falls within 300 meter buffers</span></span>
+<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>school_int_sec <span class="ot">&lt;-</span> <span class="fu">what_within_each_stops</span>(schools, intersections, <span class="dv">26918</span>, <span class="dv">300</span>)</span>
+<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a><span class="co"># create holder to record how many intersections falls within</span></span>
+<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>school_int_sec<span class="sc">$</span>input_rows_within_count <span class="ot">&lt;-</span> <span class="dv">0</span></span>
+<span id="cb22-6"><a href="#cb22-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-7"><a href="#cb22-7" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="fu">nrow</span>(school_int_sec)) { <span class="co"># loop over stop rows</span></span>
+<span id="cb22-8"><a href="#cb22-8" aria-hidden="true" tabindex="-1"></a>  <span class="cf">if</span>(<span class="sc">!</span><span class="fu">is.na</span>(<span class="fu">str_to_num</span>(i,<span class="st">"input_rows_within"</span>,school_int_sec))[<span class="dv">1</span>]){ <span class="co"># check whether there is intersection falls within</span></span>
+<span id="cb22-9"><a href="#cb22-9" aria-hidden="true" tabindex="-1"></a>    school_int_sec<span class="sc">$</span>input_rows_within_count[i] <span class="ot">&lt;-</span> <span class="fu">length</span>(<span class="fu">str_to_num</span>(i,<span class="st">"input_rows_within"</span>,school_int_sec)) <span class="co"># record the number of intersections</span></span>
+<span id="cb22-10"><a href="#cb22-10" aria-hidden="true" tabindex="-1"></a>  }</span>
+<span id="cb22-11"><a href="#cb22-11" aria-hidden="true" tabindex="-1"></a>}</span>
+<span id="cb22-12"><a href="#cb22-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb22-13"><a href="#cb22-13" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>Rd_conn <span class="ot">&lt;-</span> school_int_sec<span class="sc">$</span>input_rows_within_count</span>
+<span id="cb22-14"><a href="#cb22-14" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"Rd_conn"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-d821dc44474b3e8cd160" style="width:100%;height:464px;"></div>
@@ -502,15 +524,15 @@ Projected CRS: PCS_Lambert_Conformal_Conic</code></pre>
 <section id="calculate-length-of-roads-within-300-meter-buffers-of-the-schools" class="level1">
 <h1>Calculate Length of Roads within 300-meter buffers of the schools</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate what intersection falls within 300 meter buffers</span></span>
-<span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a>road_length <span class="ot">&lt;-</span> <span class="fu">length_in_buffer</span>(schools, roads, <span class="dv">26918</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a href="#cb23-1" aria-hidden="true" tabindex="-1"></a><span class="co"># generate what intersection falls within 300 meter buffers</span></span>
+<span id="cb23-2"><a href="#cb23-2" aria-hidden="true" tabindex="-1"></a>road_length <span class="ot">&lt;-</span> <span class="fu">length_in_buffer</span>(schools, roads, <span class="dv">26918</span>, <span class="dv">300</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: attribute variables are assumed to be spatially constant throughout
 all geometries</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a href="#cb21-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>road_len <span class="ot">&lt;-</span> road_length<span class="sc">$</span>total_length_within_buffer</span>
-<span id="cb21-2"><a href="#cb21-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb21-3"><a href="#cb21-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"road_len"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>road_len <span class="ot">&lt;-</span> road_length<span class="sc">$</span>total_length_within_buffer</span>
+<span id="cb25-2"><a href="#cb25-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb25-3"><a href="#cb25-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"road_len"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-f85a982514ce28ae593b" style="width:100%;height:464px;"></div>
@@ -521,18 +543,18 @@ all geometries</code></pre>
 <section id="calculate-average-population-density-within-300-meter-buffers-of-the-schools" class="level1">
 <h1>Calculate Average Population Density within 300-meter buffers of the schools</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get rid of the long name</span></span>
-<span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>census_data<span class="sc">$</span>pop_den <span class="ot">&lt;-</span> census_data<span class="sc">$</span><span class="st">`</span><span class="at">v_CA21_6: Population density per square kilometre</span><span class="st">`</span></span>
-<span id="cb22-3"><a href="#cb22-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb22-4"><a href="#cb22-4" aria-hidden="true" tabindex="-1"></a>pop_den <span class="ot">&lt;-</span> <span class="fu">average_value_in_buffer</span>(schools, census_data, <span class="dv">26918</span>, <span class="dv">300</span>, </span>
-<span id="cb22-5"><a href="#cb22-5" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">"pop_den"</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb26"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get rid of the long name</span></span>
+<span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a>census_data<span class="sc">$</span>pop_den <span class="ot">&lt;-</span> census_data<span class="sc">$</span><span class="st">`</span><span class="at">v_CA21_6: Population density per square kilometre</span><span class="st">`</span></span>
+<span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb26-4"><a href="#cb26-4" aria-hidden="true" tabindex="-1"></a>pop_den <span class="ot">&lt;-</span> <span class="fu">average_value_in_buffer</span>(schools, census_data, <span class="dv">26918</span>, <span class="dv">300</span>, </span>
+<span id="cb26-5"><a href="#cb26-5" aria-hidden="true" tabindex="-1"></a>                                   <span class="st">"pop_den"</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: attribute variables are assumed to be spatially constant throughout
 all geometries</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb24"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>pop_den <span class="ot">&lt;-</span> pop_den<span class="sc">$</span>pop_den</span>
-<span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"pop_den"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>pop_den <span class="ot">&lt;-</span> pop_den<span class="sc">$</span>pop_den</span>
+<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"pop_den"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-de0f735d05eac7555526" style="width:100%;height:464px;"></div>
@@ -543,13 +565,13 @@ all geometries</code></pre>
 <section id="assign-the-nearest-census-tracts-population-density-to-the-schools" class="level1">
 <h1>Assign the nearest Census Tract’s Population Density to the schools</h1>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a href="#cb25-1" aria-hidden="true" tabindex="-1"></a>pop_den_median <span class="ot">&lt;-</span> <span class="fu">nearest_median_value</span>(schools, census_data, <span class="st">"pop_den"</span>, <span class="dv">26918</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a href="#cb29-1" aria-hidden="true" tabindex="-1"></a>pop_den_median <span class="ot">&lt;-</span> <span class="fu">nearest_median_value</span>(schools, census_data, <span class="st">"pop_den"</span>, <span class="dv">26918</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: st_centroid assumes attributes are constant over geometries</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a href="#cb27-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>pop_den_median <span class="ot">&lt;-</span> pop_den<span class="sc">$</span>pop_den</span>
-<span id="cb27-2"><a href="#cb27-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb27-3"><a href="#cb27-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"pop_den_median"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a href="#cb31-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>pop_den_median <span class="ot">&lt;-</span> pop_den<span class="sc">$</span>pop_den</span>
+<span id="cb31-2"><a href="#cb31-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb31-3"><a href="#cb31-3" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">cex =</span> <span class="st">"pop_den_median"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-9eefd07531f021030c44" style="width:100%;height:464px;"></div>
@@ -562,11 +584,11 @@ all geometries</code></pre>
 <p><span class="math display">\[Entropy = -\sum_{k=1}^nP_k\times\frac{ln(P_k)}{ln(n)}\]</span></p>
 <p>Filter to only 4 types of land use types (reduce computing time for illustration purposes).</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a href="#cb28-1" aria-hidden="true" tabindex="-1"></a>landuse <span class="ot">&lt;-</span> landuse[<span class="fu">which</span>(landuse<span class="sc">$</span>Class_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"ApartmentNeighbourhoods"</span>,</span>
-<span id="cb28-2"><a href="#cb28-2" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"CoreEmploymentAreas"</span>,</span>
-<span id="cb28-3"><a href="#cb28-3" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"Natural areas"</span>,</span>
-<span id="cb28-4"><a href="#cb28-4" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"Institutional"</span>)),]</span>
-<span id="cb28-5"><a href="#cb28-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">as.factor</span>(landuse<span class="sc">$</span>Class_name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>landuse <span class="ot">&lt;-</span> landuse[<span class="fu">which</span>(landuse<span class="sc">$</span>Class_name <span class="sc">%in%</span> <span class="fu">c</span>(<span class="st">"ApartmentNeighbourhoods"</span>,</span>
+<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"CoreEmploymentAreas"</span>,</span>
+<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"Natural areas"</span>,</span>
+<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a>                                                   <span class="st">"Institutional"</span>)),]</span>
+<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">summary</span>(<span class="fu">as.factor</span>(landuse<span class="sc">$</span>Class_name))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>ApartmentNeighbourhoods     CoreEmploymentAreas           Institutional 
                     221                     168                      59 
@@ -575,7 +597,7 @@ all geometries</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb30"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb30-1"><a href="#cb30-1" aria-hidden="true" tabindex="-1"></a>entropy <span class="ot">&lt;-</span> <span class="fu">calculate_entropy</span>(schools, landuse, <span class="dv">26918</span>, <span class="dv">3000</span>, <span class="st">"Class_name"</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb34"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb34-1"><a href="#cb34-1" aria-hidden="true" tabindex="-1"></a>entropy <span class="ot">&lt;-</span> <span class="fu">calculate_entropy</span>(schools, landuse, <span class="dv">26918</span>, <span class="dv">3000</span>, <span class="st">"Class_name"</span>, <span class="cn">FALSE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stderr">
 <pre><code>Warning: attribute variables are assumed to be spatially constant throughout
 all geometries
@@ -589,11 +611,11 @@ all geometries
 Warning: attribute variables are assumed to be spatially constant throughout
 all geometries</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb32"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb32-1"><a href="#cb32-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>PCT_resi <span class="ot">&lt;-</span> entropy<span class="sc">$</span>Class_name_ApartmentNeighbourhoods</span>
-<span id="cb32-2"><a href="#cb32-2" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>PCT_comm <span class="ot">&lt;-</span> entropy<span class="sc">$</span>Class_name_CoreEmploymentAreas</span>
-<span id="cb32-3"><a href="#cb32-3" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>entropy <span class="ot">&lt;-</span> entropy<span class="sc">$</span>entropy</span>
-<span id="cb32-4"><a href="#cb32-4" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb32-5"><a href="#cb32-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">zcol =</span> <span class="st">"entropy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a href="#cb36-1" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>PCT_resi <span class="ot">&lt;-</span> entropy<span class="sc">$</span>Class_name_ApartmentNeighbourhoods</span>
+<span id="cb36-2"><a href="#cb36-2" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>PCT_comm <span class="ot">&lt;-</span> entropy<span class="sc">$</span>Class_name_CoreEmploymentAreas</span>
+<span id="cb36-3"><a href="#cb36-3" aria-hidden="true" tabindex="-1"></a>schools<span class="sc">$</span>entropy <span class="ot">&lt;-</span> entropy<span class="sc">$</span>entropy</span>
+<span id="cb36-4"><a href="#cb36-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb36-5"><a href="#cb36-5" aria-hidden="true" tabindex="-1"></a><span class="fu">mapview</span>(schools, <span class="at">zcol =</span> <span class="st">"entropy"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output-display">
 
 <div class="leaflet html-widget html-fill-item" id="htmlwidget-f57ef2983315589fed18" style="width:100%;height:464px;"></div>
