@@ -392,7 +392,7 @@ if (localStorage.getItem("not_first_load") === null) {
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In this example, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM zone 18N.</p>
+<p>In this illustration, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM zone 18N.</p>
 </section>
 <section id="load-data" class="level1">
 <h1>Load data</h1>
@@ -410,7 +410,7 @@ Dimension:     XY
 Bounding box:  xmin: -79.61918 ymin: 43.59022 xmax: -79.13372 ymax: 43.83037
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to force the geometry column to name geometry</span></span>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
 <span id="cb11-2"><a href="#cb11-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(schools) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
 <span id="cb11-3"><a href="#cb11-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb11-4"><a href="#cb11-4" aria-hidden="true" tabindex="-1"></a><span class="co"># for reproductivity</span></span>
@@ -440,7 +440,7 @@ Dimension:     XY
 Bounding box:  xmin: -79.63926 ymin: 43.581 xmax: -79.11545 ymax: 43.85545
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to force the geometry column to name geometry</span></span>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(intersections) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-4"><a href="#cb14-4" aria-hidden="true" tabindex="-1"></a><span class="co"># road centrelines in Toronto</span></span>
@@ -455,7 +455,7 @@ Dimension:     XY
 Bounding box:  xmin: -79.63926 ymin: 43.5809 xmax: -79.11545 ymax: 43.85545
 Geodetic CRS:  WGS 84</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># to force the geometry column to name geometry</span></span>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="co"># force the geometry column to name geometry</span></span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a><span class="fu">st_geometry</span>(roads) <span class="ot">&lt;-</span> <span class="st">"geometry"</span></span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb16-4"><a href="#cb16-4" aria-hidden="true" tabindex="-1"></a><span class="co"># 2021 Canadian census data</span></span>
