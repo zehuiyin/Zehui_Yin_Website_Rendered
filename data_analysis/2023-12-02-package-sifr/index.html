@@ -241,7 +241,7 @@ if (localStorage.getItem("not_first_load") === null) {
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">R Package <em>sifr</em></li></ol></nav>
+      <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item">R Package <code>sifr</code></li></ol></nav>
       <a class="flex-grow-1" role="button" data-bs-toggle="collapse" data-bs-target="#quarto-sidebar,#quarto-sidebar-glass" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
       </a>
     </div>
@@ -330,7 +330,7 @@ if (localStorage.getItem("not_first_load") === null) {
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">R Package <em>sifr</em></h1>
+<h1 class="title">R Package <code>sifr</code></h1>
   <div class="quarto-categories">
     <div class="quarto-category">R Package</div>
   </div>
@@ -338,7 +338,7 @@ if (localStorage.getItem("not_first_load") === null) {
 
 <div>
   <div class="description">
-    I developed an R Package <em>sifr</em> for conducting basic spatial interpolation and calculating land-use entropy. You can download <em>sifr</em> from <a href="https://github.com/zehuiyin/sifr">GitHub</a> and install it in your R environment.
+    I developed an R Package <code>sifr</code> for conducting basic spatial interpolation and calculating land-use entropy. You can download <code>sifr</code> from <a href="https://github.com/zehuiyin/sifr">GitHub</a> and install it in your R environment.
   </div>
 </div>
 
@@ -365,7 +365,7 @@ if (localStorage.getItem("not_first_load") === null) {
 
 </header>
 
-<p>I created an R package called <em>sifr</em> that allows users to perform basic spatial interpolation of sociodemographic and built-environment variables. These variables are useful for studying the characteristics and patterns of urban spaces, especially subway stations. The package contains functions that can take point data, such as the coordinates of subway stations, and interpolate the values of variables based on the surrounding areas such as calculating population density fall inside the subway station geometry buffers. These interpolated variables can then be used as inputs for cluster analysis or econometric analysis to explore the relationships between subway stations and their context such as built environments. The package is mainly designed for point data, but it may also work with other types of spatial data (which have not been thoroughly tested). You can find the source code of the package <a href="https://github.com/zehuiyin/sifr">here</a>. Below is a short example that demonstrates some of the core functionality of the package.</p>
+<p>I created an R package called <code>sifr</code> that allows users to perform basic spatial interpolation of sociodemographic and built-environment variables. These variables are useful for studying the characteristics and patterns of urban spaces, especially subway stations. The package contains functions that can take point data, such as the coordinates of subway stations, and interpolate the values of variables based on the surrounding areas such as calculating population density fall inside the subway station geometry buffers. These interpolated variables can then be used as inputs for cluster analysis or econometric analysis to explore the relationships between subway stations and their context such as built environments. The package is mainly designed for point data, but it may also work with other types of spatial data (which have not been thoroughly tested). You can find the source code of the package <a href="https://github.com/zehuiyin/sifr">here</a>. Below is a short example that demonstrates some of the core functionality of the package.</p>
 <section id="intro" class="level1">
 <h1>Intro</h1>
 <div class="cell">
@@ -392,7 +392,7 @@ if (localStorage.getItem("not_first_load") === null) {
 </div>
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(mapview)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<p>In this illustration, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM zone 18N (EPSG:26918).</p>
+<p>In this illustration, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM Zone 18N (EPSG:26918).</p>
 </section>
 <section id="load-data" class="level1">
 <h1>Load data</h1>
