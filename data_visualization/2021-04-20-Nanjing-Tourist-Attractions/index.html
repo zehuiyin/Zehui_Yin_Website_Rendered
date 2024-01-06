@@ -133,8 +133,27 @@ if (localStorage.getItem("not_first_load") === null) {
 }
 </script>
 
+<!--
+Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
+-->
+<style>#quarto-sidebar-glass {display: none}</style>
+
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Zehui Yin - Map of Nanjing Tourist Attractions and Ticket Prices">
+<meta property="og:description" content="This web map, created using ArcGIS Online, was the final project for my first-year GIS course GGRA30, which was taught by Dr.&nbsp;Haydn Lawrence in the winter of 2021.">
+<meta property="og:image" content="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/thumbnail.png">
+<meta property="og:site-name" content="**Zehui Yin**
+">
+<meta property="og:image:height" content="758">
+<meta property="og:image:width" content="947">
+<meta name="twitter:title" content="Zehui Yin - Map of Nanjing Tourist Attractions and Ticket Prices">
+<meta name="twitter:description" content="This web map, created using ArcGIS Online, was the final project for my first-year GIS course GGRA30, which was taught by Dr.&nbsp;Haydn Lawrence in the winter of 2021.">
+<meta name="twitter:image" content="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/thumbnail.png">
+<meta name="twitter:site" content="@zehuiyin">
+<meta name="twitter:image-height" content="758">
+<meta name="twitter:image-width" content="947">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -663,13 +682,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="zehuiyin/zehuiyin.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Updated: 2023-Dec
+ Updated: 2024-Jan
   </li>  
 </ul>
     </div>   

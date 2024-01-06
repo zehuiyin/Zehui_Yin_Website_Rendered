@@ -132,8 +132,27 @@ if (localStorage.getItem("not_first_load") === null) {
 }
 </script>
 
+<!--
+Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
+-->
+<style>#quarto-sidebar-glass {display: none}</style>
+
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Zehui Yin - Travel speed and routes of the bike-share system: An analysis of Bike Share Toronto">
+<meta property="og:description" content="">
+<meta property="og:image" content="https://zehuiyin.github.io/images/GGRC32_routing_workflow.png">
+<meta property="og:site-name" content="**Zehui Yin**
+">
+<meta property="og:image:height" content="1943">
+<meta property="og:image:width" content="3311">
+<meta name="twitter:title" content="Zehui Yin - Travel speed and routes of the bike-share system: An analysis of Bike Share Toronto">
+<meta name="twitter:description" content="">
+<meta name="twitter:image" content="https://zehuiyin.github.io/images/GGRC32_routing_workflow.png">
+<meta name="twitter:site" content="@zehuiyin">
+<meta name="twitter:image-height" content="1943">
+<meta name="twitter:image-width" content="3311">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -666,13 +685,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="zehuiyin/zehuiyin.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Updated: 2023-Dec
+ Updated: 2024-Jan
   </li>  
 </ul>
     </div>   

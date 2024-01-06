@@ -133,8 +133,27 @@ if (localStorage.getItem("not_first_load") === null) {
 }
 </script>
 
+<!--
+Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
+-->
+<style>#quarto-sidebar-glass {display: none}</style>
+
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Zehui Yin - Central Limit Theorem Demonstration">
+<meta property="og:description" content="Central Limit Theorem demonstration based on simulation: a pure frontend Shiny app using Shinylive.">
+<meta property="og:image" content="https://zehuiyin.github.io/data_visualization/2023-11-15-Central-Limit-Theorem-Demonstration/thumbnail.png">
+<meta property="og:site-name" content="**Zehui Yin**
+">
+<meta property="og:image:height" content="759">
+<meta property="og:image:width" content="942">
+<meta name="twitter:title" content="Zehui Yin - Central Limit Theorem Demonstration">
+<meta name="twitter:description" content="Central Limit Theorem demonstration based on simulation: a pure frontend Shiny app using Shinylive.">
+<meta name="twitter:image" content="https://zehuiyin.github.io/data_visualization/2023-11-15-Central-Limit-Theorem-Demonstration/thumbnail.png">
+<meta name="twitter:site" content="@zehuiyin">
+<meta name="twitter:image-height" content="759">
+<meta name="twitter:image-width" content="942">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -664,13 +683,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="zehuiyin/zehuiyin.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Updated: 2023-Dec
+ Updated: 2024-Jan
   </li>  
 </ul>
     </div>   

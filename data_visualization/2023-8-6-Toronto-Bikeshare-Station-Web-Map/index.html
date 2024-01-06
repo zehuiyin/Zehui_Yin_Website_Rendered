@@ -133,8 +133,27 @@ if (localStorage.getItem("not_first_load") === null) {
 }
 </script>
 
+<!--
+Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
+-->
+<style>#quarto-sidebar-glass {display: none}</style>
+
 
 <link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Zehui Yin - Toronto Bikeshare Station Info Web Map">
+<meta property="og:description" content="This web map shows the latest information about the bikeshare Toronto stations, such as their address and capacity.">
+<meta property="og:image" content="https://zehuiyin.github.io/data_visualization/2023-8-6-Toronto-Bikeshare-Station-Web-Map/thumbnail.png">
+<meta property="og:site-name" content="**Zehui Yin**
+">
+<meta property="og:image:height" content="979">
+<meta property="og:image:width" content="1225">
+<meta name="twitter:title" content="Zehui Yin - Toronto Bikeshare Station Info Web Map">
+<meta name="twitter:description" content="This web map shows the latest information about the bikeshare Toronto stations, such as their address and capacity.">
+<meta name="twitter:image" content="https://zehuiyin.github.io/data_visualization/2023-8-6-Toronto-Bikeshare-Station-Web-Map/thumbnail.png">
+<meta name="twitter:site" content="@zehuiyin">
+<meta name="twitter:image-height" content="979">
+<meta name="twitter:image-width" content="1225">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -665,13 +684,15 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://utteranc.es/client.js" repo="zehuiyin/zehuiyin.github.io" issue-term="pathname" theme="github-light" crossorigin="anonymous" async="">
+</script>
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
     <div class="nav-footer-left">
       <ul class="footer-items list-unstyled">
     <li class="nav-item">
- Updated: 2023-Dec
+ Updated: 2024-Jan
   </li>  
 </ul>
     </div>   
