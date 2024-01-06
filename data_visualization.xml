@@ -5,8 +5,7 @@
       xmlns:dc="http://purl.org/dc/elements/1.1/" 
       version="2.0">
 <channel>
-<title>**Zehui Yin**
-</title>
+<title>Zehui Yin&#39;s Personal Websites</title>
 <link>https://zehuiyin.github.io/data_visualization.html</link>
 <atom:link href="https://zehuiyin.github.io/data_visualization.xml" rel="self" type="application/rss+xml"/>
 <description>Zehui Yin&#39;s personal website</description>
