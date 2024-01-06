@@ -8,7 +8,7 @@
 <title>Zehui Yin&#39;s Personal Websites</title>
 <link>https://zehuiyin.github.io/data_analysis.html</link>
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
-<description>Zehui Yin&#39;s personal website</description>
+<description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto website in R.</description>
 <generator>quarto-1.3.450</generator>
 <lastBuildDate>Sat, 02 Dec 2023 05:00:00 GMT</lastBuildDate>
 <item>
