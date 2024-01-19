@@ -352,7 +352,7 @@ function updateWelcomeMessage() {
 
     if (hour >= 5 && hour < 12) {
         welcomeText = "🌅 Good Morning!";
-    } else if (hour < 18) {
+    } else if (hour >= 12 && hour < 18) {
         welcomeText = "☀️ Good Afternoon!";
     } else {
         welcomeText = "🌙 Good Evening!";
