@@ -307,6 +307,14 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 </header>
 
 <p><img align="right" width="147" height="206" src="images/Headshot.jpg" style="vertical-align:middle;margin: 0px 17px"></p>
+<!---
+Dynamic welcome message
+-->
+<p style="text-align: left;">
+</p><div id="dynamic-welcome" class="welcome-msg">
+
+</div>
+<p></p>
 <p style="text-align: left;">
 I am an undergraduate student at the University of Toronto Scarborough (UTSC), where I am pursuing a major in Economics for Management Studies, two minors in Geographic Information Science (GIS) and Applied Statistics, and a certificate in Computational Social Science. As a research assistant in the <a href="https://www.utsc.utoronto.ca/suburban-mobilities/">Suburban Mobilities Cluster</a> under the supervision of <a href="https://www.utsc.utoronto.ca/geography/steven-farber">Dr.&nbsp;Steven Farber</a> in the Human Geography Department at UTSC, I am also currently exploring ways to understand and improve transportation accessibility and efficiency in suburban areas, with a particular emphasis on Scarborough, Ontario.
 </p>
@@ -334,6 +342,30 @@ Moreover, as a passionate transit enthusiast, I find myself constantly drawn to 
 <iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Location_Map" src="https://zehuiyin.github.io/utsc_location/">
 </iframe>
 </div>
+<!---
+Dynamic welcome message script
+-->
+<script>
+// detect time and update message
+function updateWelcomeMessage() {
+    var now = new Date();
+    var hour = now.getHours();
+    var welcomeText;
+
+    if (hour >= 5 && hour < 12) {
+        welcomeText = "🌅 Good Morning!";
+    } else if (hour < 18) {
+        welcomeText = "☀️ Good Afternoon!";
+    } else {
+        welcomeText = "🌙 Good Evening!";
+    }
+
+    document.getElementById('dynamic-welcome').innerHTML = welcomeText + " Welcome to Zehui Yin's personal website.";
+}
+
+// Run the function when the page loads
+document.addEventListener('DOMContentLoaded', updateWelcomeMessage);
+</script>
 
 
 </section>
