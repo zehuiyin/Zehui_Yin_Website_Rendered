@@ -66,7 +66,7 @@
 <item>
   <title>Toronto Bikeshare Station Info Web Map</title>
   <dc:creator>Zehui Yin</dc:creator>
-  <link>https://zehuiyin.github.io/data_visualization/2023-8-6-Toronto-Bikeshare-Station-Web-Map/index.html</link>
+  <link>https://zehuiyin.github.io/data_visualization/2023-08-06-Toronto-Bikeshare-Station-Web-Map/index.html</link>
   <description><![CDATA[ 
 
 
@@ -89,14 +89,14 @@
   <category>Bikeshare</category>
   <category>Real time</category>
   <category>Web map</category>
-  <guid>https://zehuiyin.github.io/data_visualization/2023-8-6-Toronto-Bikeshare-Station-Web-Map/index.html</guid>
+  <guid>https://zehuiyin.github.io/data_visualization/2023-08-06-Toronto-Bikeshare-Station-Web-Map/index.html</guid>
   <pubDate>Sun, 06 Aug 2023 04:00:00 GMT</pubDate>
-  <media:content url="https://zehuiyin.github.io/data_visualization/2023-8-6-Toronto-Bikeshare-Station-Web-Map/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
+  <media:content url="https://zehuiyin.github.io/data_visualization/2023-08-06-Toronto-Bikeshare-Station-Web-Map/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
 </item>
 <item>
   <title>Toronto Transit Commission Real Time Web Map</title>
   <dc:creator>Zehui Yin</dc:creator>
-  <link>https://zehuiyin.github.io/data_visualization/2023-6-30-Toronto-Transit-Commission-Real-Time-Web-Map/index.html</link>
+  <link>https://zehuiyin.github.io/data_visualization/2023-06-30-Toronto-Transit-Commission-Real-Time-Web-Map/index.html</link>
   <description><![CDATA[ 
 
 
@@ -119,14 +119,14 @@
   <category>Public transit</category>
   <category>Real time</category>
   <category>Web map</category>
-  <guid>https://zehuiyin.github.io/data_visualization/2023-6-30-Toronto-Transit-Commission-Real-Time-Web-Map/index.html</guid>
+  <guid>https://zehuiyin.github.io/data_visualization/2023-06-30-Toronto-Transit-Commission-Real-Time-Web-Map/index.html</guid>
   <pubDate>Fri, 30 Jun 2023 04:00:00 GMT</pubDate>
-  <media:content url="https://zehuiyin.github.io/data_visualization/2023-6-30-Toronto-Transit-Commission-Real-Time-Web-Map/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
+  <media:content url="https://zehuiyin.github.io/data_visualization/2023-06-30-Toronto-Transit-Commission-Real-Time-Web-Map/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
 </item>
 <item>
   <title>Toronto Bike Share Web Map</title>
   <dc:creator>Zehui Yin</dc:creator>
-  <link>https://zehuiyin.github.io/data_visualization/2023-6-26-Toronto-Bike-Share-Web-Map/index.html</link>
+  <link>https://zehuiyin.github.io/data_visualization/2023-06-26-Toronto-Bike-Share-Web-Map/index.html</link>
   <description><![CDATA[ 
 
 
@@ -151,9 +151,9 @@
   <category>Bikeshare</category>
   <category>Spatial analysis</category>
   <category>Web map</category>
-  <guid>https://zehuiyin.github.io/data_visualization/2023-6-26-Toronto-Bike-Share-Web-Map/index.html</guid>
+  <guid>https://zehuiyin.github.io/data_visualization/2023-06-26-Toronto-Bike-Share-Web-Map/index.html</guid>
   <pubDate>Mon, 26 Jun 2023 04:00:00 GMT</pubDate>
-  <media:content url="https://zehuiyin.github.io/data_visualization/2023-6-26-Toronto-Bike-Share-Web-Map/thumbnail.png" medium="image" type="image/png" height="116" width="144"/>
+  <media:content url="https://zehuiyin.github.io/data_visualization/2023-06-26-Toronto-Bike-Share-Web-Map/thumbnail.png" medium="image" type="image/png" height="116" width="144"/>
 </item>
 <item>
   <title>Digital twin with real-time transit data: UF campus with RTS</title>
