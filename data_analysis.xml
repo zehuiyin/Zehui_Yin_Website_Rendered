@@ -20,7 +20,7 @@
 
 
 
-<p>I created an R package called <code>sifr</code> that allows users to perform basic spatial interpolation of sociodemographic and built-environment variables. These variables are useful for studying the characteristics and patterns of urban spaces, especially subway stations. The package contains functions that can take point data, such as the coordinates of subway stations, and interpolate the values of variables based on the surrounding areas such as calculating population density fall inside the subway station geometry buffers. These interpolated variables can then be used as inputs for cluster analysis or econometric analysis to explore the relationships between subway stations and their context such as built environments. The package is mainly designed for point data, but it may also work with other types of spatial data (which have not been thoroughly tested). You can find the source code of the package <a href="https://github.com/zehuiyin/sifr">here</a>. Below is a short example that demonstrates some of the core functionality of the package.</p>
+<p>I created an R package called <em>sifr</em> that allows users to perform basic spatial interpolation of sociodemographic and built-environment variables. These variables are useful for studying the characteristics and patterns of urban spaces, especially subway stations. The package contains functions that can take point data, such as the coordinates of subway stations, and interpolate the values of variables based on the surrounding areas such as calculating population density fall inside the subway station geometry buffers. These interpolated variables can then be used as inputs for cluster analysis or econometric analysis to explore the relationships between subway stations and their context such as built environments. The package is mainly designed for point data, but it may also work with other types of spatial data (which have not been thoroughly tested). You can find the source code of the package <a href="https://github.com/zehuiyin/sifr">here</a>. Below is a short example that demonstrates some of the core functionality of the package.</p>
 <section id="intro" class="level1">
 <h1>Intro</h1>
 <div class="cell">
@@ -77,7 +77,7 @@ font-style: inherit;">library</span>(sf)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">library</span>(mapview)</span></code></pre></div>
 </div>
-<p>In this illustration, I provided some example usage for the <code>sifr</code> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM Zone 18N (EPSG:26918).</p>
+<p>In this illustration, I provided some example usage for the <em>sifr</em> package. Some sociodemographic and built environment variables are calculated for a small random sample of schools in Toronto. Throughout this example, I used projection NAD83 / UTM Zone 18N (EPSG:26918).</p>
 </section>
 <section id="load-data" class="level1">
 <h1>Load data</h1>
