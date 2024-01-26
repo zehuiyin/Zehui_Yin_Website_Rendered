@@ -136,7 +136,6 @@ Store user's defult mode (light or dark) in the first load
 if (localStorage.getItem("not_first_load") === null) {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     window.localStorage.setItem("quarto-color-scheme", 'alternate');
-    const darkModeDefault = true;
   }
   localStorage.setItem("not_first_load", true);
 }
@@ -872,10 +871,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
-<script src="https://giscus.app/client.js" data-repo="zehuiyin/zehuiyin.github.io" data-repo-id="R_kgDOKVxrzA" data-category="Announcements" data-category-id="DIC_kwDOKVxrzM4Ccs4G" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="light" data-lang="en" crossorigin="anonymous" async="">
+<script src="https://giscus.app/client.js" data-repo="zehuiyin/zehuiyin.github.io" data-repo-id="R_kgDOKVxrzA" data-category="Announcements" data-category-id="DIC_kwDOKVxrzM4Ccs4G" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
 </script>
-<input type="hidden" id="giscus-base-theme" value="light">
-<input type="hidden" id="giscus-alt-theme" value="dark_dimmed">
+<input type="hidden" id="giscus-base-theme" value="transparent_dark">
+<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
