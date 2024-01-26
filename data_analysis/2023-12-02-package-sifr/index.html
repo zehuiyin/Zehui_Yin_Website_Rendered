@@ -188,6 +188,7 @@ Store user's defult mode (light or dark) in the first load
 if (localStorage.getItem("not_first_load") === null) {
   if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
     window.localStorage.setItem("quarto-color-scheme", 'alternate');
+    const darkModeDefault = true;
   }
   localStorage.setItem("not_first_load", true);
 }
