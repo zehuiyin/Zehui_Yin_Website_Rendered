@@ -10,7 +10,54 @@
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto website in R.</description>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Sat, 02 Dec 2023 05:00:00 GMT</lastBuildDate>
+<lastBuildDate>Sun, 31 Mar 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Toward Equitable Service Provision: A Catchment Area Analysis of The Bike Share Toronto System</title>
+  <dc:creator>Filip Panaitescu, Shixiang Xing, and Zehui Yin</dc:creator>
+  <link>https://zehuiyin.github.io/data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://zehuiyin.github.io/data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/Workflow.png" class="img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Abstract:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Over the last two to three decades, urban centers globally have shown a growing commitment to enhancing active transportation infrastructure, including the establishment of dedicated bike lanes, bike-sharing initiatives, and comprehensive active mobility networks (<a href="https://www.toronto.ca/explore-enjoy/recreation/activeto/">City of Toronto, n.d.</a>). Toronto’s endorsed docked bike-sharing program, Bike Share Toronto, has been supported by Tangerine Bank since 2011 (<a href="https://bikesharetoronto.com/faq/">Bike Share Toronto, n.d.</a>; <a href="https://doi.org/10.1007/s11116-015-9669-z">El-Assi et al., 2017</a>). While bike-sharing systems inherit the general advantages of cycling, they also offer unique benefits like increased convenience and potential cost savings (<a href="https://doi.org/10.1080/01441647.2015.1033036">Fishman, 2016</a>). Nonetheless, these systems encounter specific challenges that can impede their accessibility and equitable use among diverse demographic groups, primarily due to the fixed docking stations and associated first and last-mile connectivity issues. This study scrutinizes the Bike Share Toronto system through the lens of equity. Employing catchment area analysis, we discovered disparities in service provision: an oversupply to White, Chinese, and low-income populations contrasted with an undersupply to Black and female demographics. These findings indicate significant opportunities for enhancing the system’s equitable distribution of services. Additionally, we performed a suitability analysis to pinpoint priority zones for potential network expansion, aiming to bolster equitable access across the city.</p>
+</div>
+</div>
+<p>This project addresses the following two research questions:</p>
+<ol type="1">
+<li><p>How equitable is the access to Bike Share Toronto for all Toronto residents, especially for population subgroups based on gender, income or ethnicity?</p></li>
+<li><p>Which Bike Share Toronto service areas have higher or lower levels of equity, and where should the system expansion be prioritized to improve the service provision equity?</p></li>
+</ol>
+<p>You can find the code used in this project by clicking <a href="https://github.com/zehuiyin/bikeshareTO_equity_analysis">here</a> and the online dashboard through this <a href="https://zehuiyin.github.io/bikeshareTO_equity_analysis/">link</a>.</p>
+<embed src="https://zehuiyin.github.io/bikeshareTO_equity_analysis/Poster/Poster.pdf" width="100%" height="700px">
+<p style="text-align: left;">
+If the embedded PDF is not displayed properly, <a href="https://zehuiyin.github.io/bikeshareTO_equity_analysis/Poster/Poster.pdf" target="_blank">please click here.</a>
+</p>
+<embed src="https://zehuiyin.github.io/bikeshareTO_equity_analysis/Report/Report.pdf" width="100%" height="800px">
+<p style="text-align: left;">
+If the embedded PDF is not displayed properly, <a href="https://zehuiyin.github.io/bikeshareTO_equity_analysis/Report/Report.pdf" target="_blank">please click here.</a>
+</p>
+
+
+
+ ]]></description>
+  <category>Toronto</category>
+  <category>Bikeshare</category>
+  <category>Spatial Analysis</category>
+  <guid>https://zehuiyin.github.io/data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/</guid>
+  <pubDate>Sun, 31 Mar 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>R Package sifr</title>
   <dc:creator>Zehui Yin</dc:creator>
