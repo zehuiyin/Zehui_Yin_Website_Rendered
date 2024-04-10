@@ -10,7 +10,49 @@
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto website in R.</description>
 <generator>quarto-1.4.549</generator>
-<lastBuildDate>Sun, 31 Mar 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 10 Apr 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>How Close is Too Close? Exploring the Relationship Between Bike Theft and Police Facility Distance in Toronto</title>
+  <dc:creator>Zehui Yin</dc:creator>
+  <link>https://zehuiyin.github.io/data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://zehuiyin.github.io/data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/thumbnail.png" class="preview-image img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Abstract:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Bike thefts pose a significant deterrent to urban cycling. This research delves into the influence of police presence on bike thefts and the geographical scope of its deterrent effect. Leveraging bike theft records from 2014 to 2023 in Toronto, alongside the most recent Canadian census data, I employ two-way fixed-effect Zero-inflated Negative Binomial Regression models to scrutinize the impact of network walking distance to the nearest police facility on the number of bike thefts within each census tract. To ensure robustness, I present a variety of model specifications, including OLS multiple regressions, Poisson regressions, and standard Negative Binomial Regression. The findings indicate that a police facility within a 500-metre radius notably curtails bike thefts, with statistical significance at the 0.05 level. Yet, this deterrent effect wanes with increasing distance and becomes inconsequential beyond 500 metres. Furthermore, at distances exceeding 2 kilometres, the presence of police facilities does not influence the number of bike thefts. The study infers that police facilities exert a localized effect on bike theft prevention in urban areas. Consequently, merely increasing the number of police facilities city-wide is not an efficacious strategy for reducing bike theft. Policymakers are thus encouraged to consider alternative methods or strategies for enhancing crime deterrence.</p>
+</div>
+</div>
+<p>This project addresses the following two research questions:</p>
+<ol type="1">
+<li><p>What causal influence does the presence of police facilities have on the frequency of bike thefts in Toronto?</p></li>
+<li><p>Upon observing a deterrent effect, to what extent does the proximity of police facilities causally mitigate bike theft incidents in Toronto?</p></li>
+</ol>
+<p>You can find the code used in this project by clicking <a href="https://github.com/zehuiyin/bike_theft_and_police_stations">here</a>.</p>
+<embed src="../../files/bike_theft_police_station.pdf" width="100%" height="800px">
+<p style="text-align: left;">
+If the embedded PDF is not displayed properly, <a href="../../files/bike_theft_police_station.pdf" target="_blank">please click here.</a>
+</p>
+
+
+
+ ]]></description>
+  <category>Toronto</category>
+  <category>Crime</category>
+  <guid>https://zehuiyin.github.io/data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/</guid>
+  <pubDate>Wed, 10 Apr 2024 04:00:00 GMT</pubDate>
+</item>
 <item>
   <title>Toward Equitable Service Provision: A Catchment Area Analysis of The Bike Share Toronto System</title>
   <dc:creator>Filip Panaitescu, Shixiang Xing, and Zehui Yin</dc:creator>
