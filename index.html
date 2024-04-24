@@ -144,49 +144,6 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 -->
 <style>#quarto-sidebar-glass {display: none}</style>
 
-  <script>window.backupDefine = window.define; window.define = undefined;</script><script src="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.js"></script>
-  <script>document.addEventListener("DOMContentLoaded", function () {
- var mathElements = document.getElementsByClassName("math");
- var macros = [];
- for (var i = 0; i < mathElements.length; i++) {
-  var texText = mathElements[i].firstChild;
-  if (mathElements[i].tagName == "SPAN") {
-   katex.render(texText.data, mathElements[i], {
-    displayMode: mathElements[i].classList.contains('display'),
-    throwOnError: false,
-    macros: macros,
-    fleqn: false
-   });
-}}});
-  </script>
-  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.15.1/dist/katex.min.css">
-
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
 
 <link rel="stylesheet" href="styles.css">
 <meta property="og:title" content="Zehui Yin’s Personal Websites - About Me">
@@ -392,11 +349,20 @@ News:
 </div>
 <section id="areas-of-interest" class="level2">
 <h2 class="anchored" data-anchor-id="areas-of-interest">Areas of Interest</h2>
-<p><span class="math inline">\star</span> Spatial Analysis</p>
-<p><span class="math inline">\star</span> Econometrics</p>
-<p><span class="math inline">\star</span> Transportation Equity</p>
-<p><span class="math inline">\star</span> Public Transit &amp; Micromobility</p>
-<p><span class="math inline">\star</span> Cartography &amp; Data Visualization</p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<ul>
+<li><p>Spatial Analysis</p></li>
+<li><p>Econometrics</p></li>
+<li><p>Transportation Equity</p></li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul>
+<li><p>Public Transit &amp; Micromobility</p></li>
+<li><p>Cartography &amp; Data Visualization</p></li>
+</ul>
+</div>
+</div>
 </section>
 <section id="get-in-touch" class="level2">
 <h2 class="anchored" data-anchor-id="get-in-touch">Get in Touch</h2>
