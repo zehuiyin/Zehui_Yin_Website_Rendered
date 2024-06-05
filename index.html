@@ -318,7 +318,17 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 </header>
 
 
-<p><img align="right" width="147" height="206" src="images/Headshot.jpg" style="vertical-align:middle;margin: 0px 17px"></p>
+<style>
+@media screen and (max-width: 500px) {
+  #headshot {
+    float: none !important;
+    display: block !important;
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+}
+</style>
+<p><img id="headshot" width="248.4" height="281.4" src="images/Headshot.png" style="vertical-align: middle;margin: 0px 15px;float: left"></p>
 <!---
 Dynamic welcome message
 -->
