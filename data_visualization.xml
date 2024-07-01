@@ -296,6 +296,202 @@
   <media:content url="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
 </item>
 <item>
+  <title>Map of Nanjing Tourist Attractions and Ticket Prices</title>
+  <dc:creator>Zehui Yin</dc:creator>
+  <link>https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/static.html</link>
+  <description><![CDATA[ 
+
+
+
+
+<style>
+* {box-sizing:border-box}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  margin-top: -22px;
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 18px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+  background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  cursor: pointer;
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@keyframes fade {
+  from {opacity: .4}
+  to {opacity: 1}
+}
+</style>
+<!-- Slideshow container -->
+<div class="slideshow-container">
+<!-- Full-width images with number and caption text -->
+<div class="mySlides fade">
+<div class="numbertext">
+1 / 5
+</div>
+<img src="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/slides1.png" style="width:100%"> <!-- no caption -->
+<div class="text">
+
+</div>
+</div>
+<div class="mySlides fade">
+<div class="numbertext">
+2 / 5
+</div>
+<img src="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/slides2.png" style="width:100%">
+<div class="text">
+
+</div>
+</div>
+<div class="mySlides fade">
+<div class="numbertext">
+3 / 5
+</div>
+<img src="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/slides3.png" style="width:100%">
+<div class="text">
+
+</div>
+</div>
+<div class="mySlides fade">
+<div class="numbertext">
+4 / 5
+</div>
+<img src="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/slides4.png" style="width:100%">
+<div class="text">
+
+</div>
+</div>
+<div class="mySlides fade">
+<div class="numbertext">
+5 / 5
+</div>
+<img src="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/slides5.png" style="width:100%">
+<div class="text">
+
+</div>
+</div>
+<!-- Next and previous buttons -->
+<p><a class="prev" onclick="plusSlides(-1)">❮</a> <a class="next" onclick="plusSlides(1)">❯</a></p>
+</div>
+<!-- The dots/circles -->
+<div style="text-align:center">
+<p><span class="dot" onclick="currentSlide(1)"></span> <span class="dot" onclick="currentSlide(2)"></span> <span class="dot" onclick="currentSlide(3)"></span> <span class="dot" onclick="currentSlide(4)"></span> <span class="dot" onclick="currentSlide(5)"></span></p>
+</div>
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+}
+</script>
+<p>The map showcases some of the most famous tourist attractions in Nanjing, the capital city of Jiangsu province, including their locations, ticket prices, national levels, and descriptions in attachments.</p>
+<p>Nanjing is a city with a rich history, having served as the capital city for six dynasties in the past. As a result, it is home to numerous old buildings, palaces, and city walls that attract tourists from all over the world. With this web map, tourists can easily access information about these famous attractions, helping them to better plan their trips and make the most of their time in Nanjing.</p>
+<p>I created this web map with the hope of attracting more people to visit Nanjing and learn about its fascinating history and culture. By providing useful information and making it easily accessible, I hope to encourage more people to explore this beautiful city and appreciate its unique charms.</p>
+
+
+
+ ]]></description>
+  <category>Nanjing</category>
+  <category>Web map</category>
+  <guid>https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/static.html</guid>
+  <pubDate>Mon, 19 Apr 2021 16:00:00 GMT</pubDate>
+  <media:content url="https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/thumbnail.png" medium="image" type="image/png" height="115" width="144"/>
+</item>
+<item>
   <title>Admission Universities of High School Classmates</title>
   <dc:creator>Zehui Yin</dc:creator>
   <link>https://zehuiyin.github.io/data_visualization/2020-07-20-high-school-graduation/</link>

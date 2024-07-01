@@ -2,7 +2,7 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://zehuiyin.github.io/research.html</loc>
-    <lastmod>2024-05-04T16:59:25.670Z</lastmod>
+    <lastmod>2024-06-20T09:32:49.267Z</lastmod>
   </url>
   <url>
     <loc>https://zehuiyin.github.io/data_visualization.html</loc>
@@ -21,52 +21,56 @@
     <lastmod>2024-05-04T16:59:25.535Z</lastmod>
   </url>
   <url>
-    <loc>https://zehuiyin.github.io/data_visualization/2020-07-20-high-school-graduation/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.530Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.516Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/CV.html</loc>
-    <lastmod>2024-05-04T16:59:25.471Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.509Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.511Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
-  </url>
-  <url>
-    <loc>https://zehuiyin.github.io/data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.515Z</lastmod>
+    <loc>https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/index.html</loc>
+    <lastmod>2024-07-01T14:54:22.473Z</lastmod>
   </url>
   <url>
     <loc>https://zehuiyin.github.io/data_analysis.html</loc>
     <lastmod>2024-05-04T16:59:25.508Z</lastmod>
   </url>
   <url>
-    <loc>https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/index.html</loc>
-    <lastmod>2024-05-04T16:59:25.531Z</lastmod>
+    <loc>https://zehuiyin.github.io/data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.515Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.511Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.509Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/CV.html</loc>
+    <lastmod>2024-05-04T16:59:25.471Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.511Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.512Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.516Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_visualization/2020-07-20-high-school-graduation/index.html</loc>
+    <lastmod>2024-05-04T16:59:25.530Z</lastmod>
+  </url>
+  <url>
+    <loc>https://zehuiyin.github.io/data_visualization/2021-04-20-Nanjing-Tourist-Attractions/static.html</loc>
+    <lastmod>2024-07-01T15:52:17.163Z</lastmod>
   </url>
   <url>
     <loc>https://zehuiyin.github.io/data_visualization/2023-06-26-Toronto-Bike-Share-Web-Map/index.html</loc>
