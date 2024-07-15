@@ -9,7 +9,7 @@
 <link>https://zehuiyin.github.io/data_analysis.html</link>
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto website in R.</description>
-<generator>quarto-1.4.549</generator>
+<generator>quarto-1.5.54</generator>
 <lastBuildDate>Tue, 09 Apr 2024 16:00:00 GMT</lastBuildDate>
 <item>
   <title>How Close is Too Close? Exploring the Relationship Between Bike Theft and Police Facility Distance in Toronto</title>
@@ -116,6 +116,7 @@ If the embedded PDF is not displayed properly, <a href="https://zehuiyin.github.
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
@@ -138,6 +139,7 @@ font-style: inherit;">library</span>(devtools)</span>
 </div>
 <div class="sourceCode cell-code" id="cb4" style="background: #f1f3f5;"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
@@ -368,8 +370,10 @@ font-style: inherit;">0</span></span>
 <span id="cb18-6"></span>
 <span id="cb18-7"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -381,6 +385,7 @@ background-color: null;
 font-style: inherit;"># loop over stop rows</span></span>
 <span id="cb18-8">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span>(<span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">!</span><span class="fu" style="color: #4758AB;
@@ -710,6 +715,7 @@ font-style: inherit;">library</span>(latex2exp)</span></code></pre></div>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(n, rho, times) {</span>
 <span id="cb2-2">  return_df <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -742,8 +748,10 @@ font-style: inherit;">"rho"</span>, rho))</span>
 <span id="cb2-4">  </span>
 <span id="cb2-5">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (count <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -783,8 +791,10 @@ font-style: inherit;">"rho"</span>, rho))</span>
 <span id="cb2-9">    </span>
 <span id="cb2-10">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -803,8 +813,10 @@ background-color: null;
 font-style: inherit;">1</span>)</span>
 <span id="cb2-12">      <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span>(j <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">2</span><span class="sc" style="color: #5E5E5E;
@@ -828,8 +840,10 @@ font-style: inherit;">1</span>)</span>
 <span id="cb2-16">    </span>
 <span id="cb2-17">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">colnames</span>(df)) {</span>
@@ -863,8 +877,10 @@ font-style: inherit;">1</span></span>
 <span id="cb2-23">    </span>
 <span id="cb2-24">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">gsub</span>(<span class="st" style="color: #20794D;
@@ -1557,6 +1573,7 @@ font-style: inherit;"># create a function to genereate random location in a circ
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(n, radius){</span>
 <span id="cb2-3">  output <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -1565,6 +1582,7 @@ background-color: null;
 font-style: inherit;">data.frame</span>()</span>
 <span id="cb2-4">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">while</span> (<span class="fu" style="color: #4758AB;
 background-color: null;
 font-style: inherit;">nrow</span>(output) <span class="sc" style="color: #5E5E5E;
@@ -1585,6 +1603,7 @@ background-color: null;
 font-style: inherit;">max =</span> radius)</span>
 <span id="cb2-6">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (iteration[<span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span>]<span class="sc" style="color: #5E5E5E;
@@ -1793,8 +1812,10 @@ background-color: null;
 font-style: inherit;">0</span></span>
 <span id="cb3-3"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -1810,6 +1831,7 @@ background-color: null;
 font-style: inherit;"># check whether b, c, d falls within the semicircle created by a and origin (0,0)</span></span>
 <span id="cb3-6">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (b[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -1881,6 +1903,7 @@ font-style: inherit;">1</span></span>
 <span id="cb3-10">  }</span>
 <span id="cb3-11">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (b[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -1955,6 +1978,7 @@ background-color: null;
 font-style: inherit;"># check whether a, c, d falls within the semicircle created by b and origin (0,0)</span></span>
 <span id="cb3-17">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2026,6 +2050,7 @@ font-style: inherit;">1</span></span>
 <span id="cb3-21">  }</span>
 <span id="cb3-22">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2100,6 +2125,7 @@ background-color: null;
 font-style: inherit;"># check whether a, b, d falls within the semicircle created by c and origin (0,0)</span></span>
 <span id="cb3-28">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2171,6 +2197,7 @@ font-style: inherit;">1</span></span>
 <span id="cb3-32">  }</span>
 <span id="cb3-33">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2245,6 +2272,7 @@ background-color: null;
 font-style: inherit;"># check whether a, b, c falls within the semicircle created by d and origin (0,0)</span></span>
 <span id="cb3-39">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2316,6 +2344,7 @@ font-style: inherit;">1</span></span>
 <span id="cb3-43">  }</span>
 <span id="cb3-44">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2390,6 +2419,7 @@ background-color: null;
 font-style: inherit;"># if any of the 4 conditions is met, then the four points are in the same semicircle</span></span>
 <span id="cb3-50">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (cond <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
@@ -2439,6 +2469,7 @@ with 10000 simulations equals = 50.82 %</code></pre>
 background-color: null;
 font-style: inherit;">&lt;-</span> <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">function</span>(n) {</span>
 <span id="cb5-2">  a <span class="ot" style="color: #003B4F;
 background-color: null;
@@ -2475,8 +2506,10 @@ background-color: null;
 font-style: inherit;">0</span></span>
 <span id="cb5-7">  <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
@@ -2492,6 +2525,7 @@ background-color: null;
 font-style: inherit;"># check whether b, c, d falls within the semicircle created by a and origin (0,0)</span></span>
 <span id="cb5-10">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (b[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2563,6 +2597,7 @@ font-style: inherit;">1</span></span>
 <span id="cb5-14">    }</span>
 <span id="cb5-15">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (b[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2637,6 +2672,7 @@ background-color: null;
 font-style: inherit;"># check whether a, c, d falls within the semicircle created by b and origin (0,0)</span></span>
 <span id="cb5-21">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2708,6 +2744,7 @@ font-style: inherit;">1</span></span>
 <span id="cb5-25">    }</span>
 <span id="cb5-26">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2782,6 +2819,7 @@ background-color: null;
 font-style: inherit;"># check whether a, b, d falls within the semicircle created by c and origin (0,0)</span></span>
 <span id="cb5-32">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2853,6 +2891,7 @@ font-style: inherit;">1</span></span>
 <span id="cb5-36">    }</span>
 <span id="cb5-37">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2927,6 +2966,7 @@ background-color: null;
 font-style: inherit;"># check whether a, b, c falls within the semicircle created by d and origin (0,0)</span></span>
 <span id="cb5-43">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -2998,6 +3038,7 @@ font-style: inherit;">1</span></span>
 <span id="cb5-47">    }</span>
 <span id="cb5-48">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (a[i,<span class="st" style="color: #20794D;
 background-color: null;
 font-style: inherit;">"y"</span>]<span class="sc" style="color: #5E5E5E;
@@ -3072,6 +3113,7 @@ background-color: null;
 font-style: inherit;"># if any of the 4 conditions is met, then the four points are in the same semicircle</span></span>
 <span id="cb5-54">    <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">if</span> (cond <span class="sc" style="color: #5E5E5E;
 background-color: null;
 font-style: inherit;">&gt;=</span> <span class="dv" style="color: #AD0000;
@@ -3150,8 +3192,10 @@ font-style: inherit;">"average proportion"</span>)</span>
 <span id="cb7-3"></span>
 <span id="cb7-4"><span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">for</span> (i <span class="cf" style="color: #003B4F;
 background-color: null;
+font-weight: bold;
 font-style: inherit;">in</span> <span class="dv" style="color: #AD0000;
 background-color: null;
 font-style: inherit;">1</span><span class="sc" style="color: #5E5E5E;
