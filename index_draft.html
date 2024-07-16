@@ -143,6 +143,7 @@ if (localStorage.getItem("not_first_load") === null) {
 Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 -->
 <style>#quarto-sidebar-glass {display: none}</style>
+<meta name="quarto:status" content="draft">
 
 
 <link rel="stylesheet" href="styles.css">
@@ -158,7 +159,7 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 <body class="nav-sidebar floating nav-fixed fullcontent">
 
 <div id="quarto-search-results"></div>
-  <header id="quarto-header" class="headroom fixed-top">
+  <header id="quarto-header" class="headroom fixed-top"><div id="quarto-draft-alert" class="alert alert-warning"><i class="bi bi-pencil-square"></i>Draft</div>
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
@@ -249,7 +250,7 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link active">
+  <a href="./index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About Me</span></a>
   </div>
 </li>
@@ -336,7 +337,7 @@ Dynamic welcome message
 
 </div>
 <p style="text-align: left;">
-I am an incoming Geography PhD student at the School of Earth, Environment &amp; Society at McMaster University, under the guidance of <a href="https://experts.mcmaster.ca/display/scottdm">Dr.&nbsp;Darren Scott</a>. I obtained an Honours Bachelor of Arts (HBA) Degree from the University of Toronto Scarborough (UTSC) in 2024 with a major in Economics for Management Studies, two minors in Geographic Information Science (GIS) and Applied Statistics, and a certificate in Computational Social Science. My works have twice been funded by the <a href="https://www.utsc.utoronto.ca/research/university-toronto-excellence-award">University of Toronto Excellence Award</a>. I am the <a href="https://utsc.utoronto.ca/news-events/undergraduate-experience/he-graduated-top-marks-u-t-heres-how-he-did-it">Governor General’s Silver Medal</a> recipient in recognition of the highest academic standing I achieved among all HBA graduates at the University of Toronto in 2024. As a research assistant in the <a href="https://www.utsc.utoronto.ca/suburban-mobilities/">Suburban Mobilities Cluster</a> under the supervision of <a href="https://www.utsc.utoronto.ca/geography/steven-farber">Dr.&nbsp;Steven Farber</a> in the Human Geography Department at UTSC, I am also currently exploring ways to understand and improve transportation accessibility and efficiency in suburban areas, with a particular emphasis on Scarborough, Ontario.
+I am a Geography PhD student at the School of Earth, Environment &amp; Society at McMaster University, under the guidance of <a href="https://experts.mcmaster.ca/display/scottdm">Dr.&nbsp;Darren Scott</a>. I obtained an Honours Bachelor of Arts (HBA) Degree from the University of Toronto Scarborough (UTSC) in 2024 with a major in Economics for Management Studies, two minors in Geographic Information Science (GIS) and Applied Statistics, and a certificate in Computational Social Science. My works have twice been funded by the <a href="https://www.utsc.utoronto.ca/research/university-toronto-excellence-award">University of Toronto Excellence Award</a>. I am also the <a href="https://utsc.utoronto.ca/news-events/undergraduate-experience/he-graduated-top-marks-u-t-heres-how-he-did-it">Governor General’s Silver Medal</a> recipient in recognition of the highest academic standing I achieved among all HBA graduates at the University of Toronto in 2024. Before coming to McMaster University, I was a research assistant in the <a href="https://www.utsc.utoronto.ca/suburban-mobilities">Suburban Mobilities Cluster</a> in the Human Geography Department at UTSC, where I participated in several projects conducting survey and network data analysis exploring transportation accessibility, equity, and justice in suburban areas, with a particular emphasis on Scarborough, Ontario, under the supervision of <a href="https://www.utsc.utoronto.ca/geography/steven-farber">Dr.&nbsp;Steven Farber</a>, <a href="https://utsc.utoronto.ca/mgmt/andre-cire">Dr.&nbsp;Andre Cire</a>, and <a href="https://tiznadoaitken.cl/">Dr.&nbsp;Ignacio Tiznado-Aitken</a> from 2022 to 2024.
 </p>
 <p style="text-align: left;">
 My interests in spatial analysis and econometrics have inspired me to delve into examining the spatial patterns of social issues, with a particular focus on using GIS and statistical tools to visualize and analyze these patterns. With my extensive experience in R programming and proficiency in a variety of GIS software, such as ArcGIS Pro and ArcGIS Online, I am well-equipped to tackle complex spatial and social problems from a quantitative approach.
@@ -371,10 +372,10 @@ ol, ul {
 <p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:yinz39@mcmaster.ca">yinz39@mcmaster.ca</a></p>
 <p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:zehui.yin@mail.utoronto.ca">zehui.yin@mail.utoronto.ca</a></p>
 <p><i class="fa-solid fa-envelope" aria-label="envelope"></i> <a href="mailto:zehuiyin@gmail.com">zehuiyin@gmail.com</a></p>
-<p><i class="fa-solid fa-location-dot" aria-label="location-dot"></i> <a href="https://www.google.com/maps/place/Highland+Hall/@43.7839908,-79.1862042,18z/data=!4m6!3m5!1s0x89d4dbde4725f893:0x3ffba14a9dfaf743!8m2!3d43.7846202!4d-79.1859452!16s%2Fg%2F11fb0fbqtl?entry=ttu">1265 Military Trail, Scarborough, ON M1C 1A4</a></p>
+<p><i class="fa-solid fa-location-dot" aria-label="location-dot"></i><img src="" hspace="1em" vspace="4.41px"> <a href="">Trans Lab, Burke Science Building (BSB), Room 308, 1280 Main Street West, Hamilton, ON L8S 4K1</a></p>
 <style>.embed-container {position: relative; padding-bottom: 50%; height: 0; max-width: 100%;} .embed-container iframe, .embed-container object, .embed-container iframe{position: absolute; top: 0; left: 0; width: 100%; height: 100%;} small{position: absolute; z-index: 40; bottom: 0; margin-bottom: -15px;}</style>
 <div class="embed-container">
-<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Location_Map" src="https://zehuiyin.github.io/utsc_location/">
+<iframe width="500" height="400" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" title="Location_Map" src="https://zehuiyin.github.io/mac_location/">
 </iframe>
 </div>
 <!---
