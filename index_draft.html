@@ -341,7 +341,7 @@ button {
 </style>
 <audio id="pronunciation" src="audio/zehuiyin.m4a">
 </audio>
-<p><img id="headshot" width="248.4" height="281.4" src="images/Headshot.png" style="vertical-align: middle;margin: 0px 15px 0px 0px;float: left"></p>
+<p><img id="headshot" width="248.4" height="281.4" src="images/Headshot.png" style="vertical-align: middle;margin: 0px 15px 0px 0px;float: left;border-radius: 5%;"></p>
 <!---
 Dynamic welcome message
 -->
@@ -412,7 +412,8 @@ function updateWelcomeMessage() {
     }
 
     document.getElementById('dynamic-welcome').innerHTML = welcomeText + 
-    " I am Zehui Yin (" + `<a href="https://en.wikipedia.org/wiki/Help:IPA/Mandarin">/ˌtsɤˈxwei ˈin/</a>` + 
+    " I am Zehui Yin (" + 
+    `<a href="https://en.wikipedia.org/wiki/Help:IPA/Mandarin">/ˌtsɤˈxwei ˈin/</a>` + 
     `<button id="myBtn" onclick="toggleAudio()"><i class="bi bi-volume-up-fill"></i></button>` +
     ", Simplified Chinese: 殷泽辉). Welcome to my personal website.";
 }
