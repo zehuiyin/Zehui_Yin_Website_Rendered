@@ -10,7 +10,30 @@
 <atom:link href="https://zehuiyin.github.io/data_visualization.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto website in R.</description>
 <generator>quarto-1.5.57</generator>
-<lastBuildDate>Mon, 07 Oct 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Wed, 09 Oct 2024 04:00:00 GMT</lastBuildDate>
+<item>
+  <title>Hamilton Street Railway Real Time Web Map</title>
+  <dc:creator>Zehui Yin</dc:creator>
+  <link>https://zehuiyin.github.io/data_visualization/2024-10-09-HSR-Realtime-Location/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><a href="https://zehuiyin.shinyapps.io/HSR_realtime_location/"><img src="https://zehuiyin.github.io/data_visualization/2024-10-09-HSR-Realtime-Location/HSR_realtime.png" class="img-fluid"></a></p>
+<p>This Shiny app provides real-time locations of Hamilton Street Railway transit vehicles. Sourced from Hamilton’s open data using <a href="https://opendata.hamilton.ca/GTFS-RT/">GTFS real-time feeds</a>, the vehicle locations refresh every minute. Click the image above or this <a href="https://zehuiyin.shinyapps.io/HSR_realtime_location/">link</a> to access the app on <em>Shinyapps.io</em> in a separate window.</p>
+
+
+
+ ]]></description>
+  <category>Hamilton</category>
+  <category>Public transit</category>
+  <category>Real time</category>
+  <category>Web map</category>
+  <guid>https://zehuiyin.github.io/data_visualization/2024-10-09-HSR-Realtime-Location/</guid>
+  <pubDate>Wed, 09 Oct 2024 04:00:00 GMT</pubDate>
+  <media:content url="https://zehuiyin.github.io/data_visualization/2024-10-09-HSR-Realtime-Location/HSR_realtime.png" medium="image" type="image/png" height="71" width="144"/>
+</item>
 <item>
   <title>Hamilton Demographic Maps</title>
   <dc:creator>Zehui Yin</dc:creator>
