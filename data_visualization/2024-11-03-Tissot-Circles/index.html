@@ -7,9 +7,10 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Zehui Yin">
-<meta name="dcterms.date" content="2022-06-22">
+<meta name="dcterms.date" content="2024-11-03">
+<meta name="description" content="A coordinate reference system is a crucial component for geographical data. It governs how spatial features are placed and aligned on the map. Tissot circles are an excellent way to demonstrate distortion in different coordinate reference systems.">
 
-<title>Digital Twin with Real-time Transit Data: UF Campus with RTS – Zehui Yin’s Personal Websites</title>
+<title>Tissot Circles in Different Coordinate Reference Systems – Zehui Yin’s Personal Websites</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,6 +22,40 @@ ul.task-list li input[type="checkbox"] {
   width: 0.8em;
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
 }
 </style>
 
@@ -148,13 +183,19 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 
 
 <link rel="stylesheet" href="../../styles.css">
-<meta property="og:title" content="Digital Twin with Real-time Transit Data: UF Campus with RTS – Zehui Yin’s Personal Websites">
-<meta property="og:description" content="This is Zehui Yin’s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto.">
+<meta property="og:title" content="Tissot Circles in Different Coordinate Reference Systems – Zehui Yin’s Personal Websites">
+<meta property="og:description" content="A coordinate reference system is a crucial component for geographical data. It governs how spatial features are placed and aligned on the map. Tissot circles are an excellent way to demonstrate distortion in different coordinate reference systems.">
+<meta property="og:image" content="https://zehuiyin.github.io/data_visualization/2024-11-03-Tissot-Circles/mercator.png">
 <meta property="og:site_name" content="Zehui Yin's Personal Websites">
-<meta name="twitter:title" content="Digital Twin with Real-time Transit Data: UF Campus with RTS – Zehui Yin’s Personal Websites">
-<meta name="twitter:description" content="This is Zehui Yin’s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto.">
+<meta property="og:image:height" content="1286">
+<meta property="og:image:width" content="1678">
+<meta name="twitter:title" content="Tissot Circles in Different Coordinate Reference Systems – Zehui Yin’s Personal Websites">
+<meta name="twitter:description" content="A coordinate reference system is a crucial component for geographical data. It governs how spatial features are placed and aligned on the map. Tissot circles are an excellent way to demonstrate distortion in different coordinate reference systems.">
+<meta name="twitter:image" content="https://zehuiyin.github.io/data_visualization/2024-11-03-Tissot-Circles/mercator.png">
 <meta name="twitter:site" content="@zehuiyin">
-<meta name="twitter:card" content="summary">
+<meta name="twitter:image-height" content="1286">
+<meta name="twitter:image-width" content="1678">
+<meta name="twitter:card" content="summary_large_image">
 </head>
 
 <body class="nav-sidebar floating nav-fixed">
@@ -229,7 +270,7 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Digital Twin with Real-time Transit Data: UF Campus with RTS</h1>
+          <h1 class="quarto-secondary-nav-title">Tissot Circles in Different Coordinate Reference Systems</h1>
         </a>     
     </div>
   </nav>
@@ -302,13 +343,14 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#project-summary" id="toc-project-summary" class="nav-link active" data-scroll-target="#project-summary">Project summary</a></li>
-  <li><a href="#software-requirements" id="toc-software-requirements" class="nav-link" data-scroll-target="#software-requirements">Software requirements</a></li>
-  <li><a href="#data-sources" id="toc-data-sources" class="nav-link" data-scroll-target="#data-sources">Data sources</a></li>
-  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
-  <li><a href="#helpful-reminder" id="toc-helpful-reminder" class="nav-link" data-scroll-target="#helpful-reminder">Helpful reminder</a></li>
-  <li><a href="#example-or-complementary-codes-or-files-included" id="toc-example-or-complementary-codes-or-files-included" class="nav-link" data-scroll-target="#example-or-complementary-codes-or-files-included">Example or complementary codes or files included</a></li>
-  <li><a href="#reference" id="toc-reference" class="nav-link" data-scroll-target="#reference">Reference</a></li>
+  <li><a href="#geographic-coordinate-system-wgs-1984" id="toc-geographic-coordinate-system-wgs-1984" class="nav-link active" data-scroll-target="#geographic-coordinate-system-wgs-1984">Geographic Coordinate System (WGS 1984)</a></li>
+  <li><a href="#projected-coordinate-system" id="toc-projected-coordinate-system" class="nav-link" data-scroll-target="#projected-coordinate-system">Projected Coordinate System</a>
+  <ul class="collapse">
+  <li><a href="#world-mercator" id="toc-world-mercator" class="nav-link" data-scroll-target="#world-mercator">World Mercator</a></li>
+  <li><a href="#world-equidistant-cylindrical" id="toc-world-equidistant-cylindrical" class="nav-link" data-scroll-target="#world-equidistant-cylindrical">World Equidistant Cylindrical</a></li>
+  <li><a href="#equal-area-projection" id="toc-equal-area-projection" class="nav-link" data-scroll-target="#equal-area-projection">Equal Area Projection</a></li>
+  <li><a href="#plate-carrée-projection" id="toc-plate-carrée-projection" class="nav-link" data-scroll-target="#plate-carrée-projection">Plate Carrée Projection</a></li>
+  </ul></li>
   </ul>
 </nav>
     </div>
@@ -317,15 +359,17 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Digital Twin with Real-time Transit Data: UF Campus with RTS</h1>
+<h1 class="title d-none d-lg-block">Tissot Circles in Different Coordinate Reference Systems</h1>
   <div class="quarto-categories">
-    <div class="quarto-category">Digital twin</div>
-    <div class="quarto-category">Real time</div>
-    <div class="quarto-category">Web map</div>
-    <div class="quarto-category">Gainesville</div>
+    <div class="quarto-category">Static map</div>
   </div>
   </div>
 
+<div>
+  <div class="description">
+    A coordinate reference system is a crucial component for geographical data. It governs how spatial features are placed and aligned on the map. Tissot circles are an excellent way to demonstrate distortion in different coordinate reference systems.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
@@ -340,7 +384,7 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
     <div>
     <div class="quarto-title-meta-heading">Published</div>
     <div class="quarto-title-meta-contents">
-      <p class="date">June 22, 2022</p>
+      <p class="date">November 3, 2024</p>
     </div>
   </div>
   
@@ -352,97 +396,97 @@ Hide quarto-sidebar-glass (fix bug at the webpage bottom margin)
 </header>
 
 
-<p><img src="../../images/digital_twins.png" class="img-fluid"></p>
-<section id="project-summary" class="level2">
-<h2 class="anchored" data-anchor-id="project-summary">Project summary</h2>
-<p>This project creates an ArcGIS Online web app with a 3D map which focuses on the UF campus. The 3D map contains the 3D models of the buildings on the UF campus, city roads, bus stops and the real-time RTS buses’ locations.</p>
+<p>In the post, I create several maps using different coordinate reference systems to demonstrate the distortion introduced by various types of projections. Projected coordinate systems are classified into equal-area, conformal, and equidistant or compromise projections, based on which characteristics they preserve: area, shape, or distance. There is no perfect projection; we always have to decide which features we want to preserve on our maps.</p>
+<div id="b4e3547e" class="cell" data-execution_count="1">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pyproj <span class="im">import</span> CRS</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Load the data used to create the maps. The <code>Admin.geojson</code> file contains the world administrative boundaries. The <code>Points_Buffer.geojson</code> file contains the Tissot circles, each with a geodesic radius of 600 kilometres.</p>
+<div id="740cdc41" class="cell" data-execution_count="2">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>url <span class="op">=</span> <span class="st">"https://github.com/zehuiyin/tissot_circles/raw/refs/heads/main/"</span></span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>admin <span class="op">=</span> gpd.read_file(url <span class="op">+</span> <span class="st">"Admin.geojson"</span>)</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>tissot <span class="op">=</span> gpd.read_file(url <span class="op">+</span> <span class="st">"Points_Buffer.geojson"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Create a function to reproject both datasets and map the Tissot circles on top of the administrative boundaries.</p>
+<div id="4547cf4c" class="cell" data-execution_count="3">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> tissot_map(epsg):</span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  fig, ax <span class="op">=</span> plt.subplots(dpi<span class="op">=</span><span class="dv">300</span>)</span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  admin.to_crs(epsg) <span class="op">\</span></span>
+<span id="cb3-4"><a href="#cb3-4" aria-hidden="true" tabindex="-1"></a>    .plot(ax<span class="op">=</span>ax,</span>
+<span id="cb3-5"><a href="#cb3-5" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">"grey"</span>,</span>
+<span id="cb3-6"><a href="#cb3-6" aria-hidden="true" tabindex="-1"></a>          zorder<span class="op">=</span><span class="dv">5</span>)</span>
+<span id="cb3-7"><a href="#cb3-7" aria-hidden="true" tabindex="-1"></a>  tissot.to_crs(epsg) <span class="op">\</span></span>
+<span id="cb3-8"><a href="#cb3-8" aria-hidden="true" tabindex="-1"></a>    .plot(ax<span class="op">=</span>ax, </span>
+<span id="cb3-9"><a href="#cb3-9" aria-hidden="true" tabindex="-1"></a>          color<span class="op">=</span><span class="st">"#1f78b4"</span>,</span>
+<span id="cb3-10"><a href="#cb3-10" aria-hidden="true" tabindex="-1"></a>          zorder<span class="op">=</span><span class="dv">10</span>)</span>
+<span id="cb3-11"><a href="#cb3-11" aria-hidden="true" tabindex="-1"></a>  ax.set_title(CRS.from_epsg(epsg).name)</span>
+<span id="cb3-12"><a href="#cb3-12" aria-hidden="true" tabindex="-1"></a>  ax.set_aspect(<span class="st">"equal"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<section id="geographic-coordinate-system-wgs-1984" class="level1">
+<h1>Geographic Coordinate System (WGS 1984)</h1>
+<p>Firstly, this map shows the World Geodetic System 1984, a geographic coordinate system that is unprojected. The map units are in degrees instead of metres.</p>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a>tissot_map(<span class="dv">4326</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="38e7a8ee" class="cell quarto-layout-panel" data-layout="[[100]]" data-execution_count="4">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="index_files/figure-html/cell-5-output-1.png" class="img-fluid" width="1804"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="software-requirements" class="level2">
-<h2 class="anchored" data-anchor-id="software-requirements">Software requirements</h2>
-<ol type="1">
-<li>ArcGIS Pro</li>
-<li>ArcGIS Online</li>
-<li>ArcGIS CityEngine</li>
-<li>(Optional) Python IDE</li>
-</ol>
+<section id="projected-coordinate-system" class="level1">
+<h1>Projected Coordinate System</h1>
+<section id="world-mercator" class="level2">
+<h2 class="anchored" data-anchor-id="world-mercator">World Mercator</h2>
+<p>Then, this map shows the World Mercator projection, a conformal projection. As a result, the circle shapes are preserved in this map.</p>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>tissot_map(<span class="dv">3395</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c6f88925" class="cell quarto-layout-panel" data-layout="[[100]]" data-execution_count="5">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="index_files/figure-html/cell-6-output-1.png" class="img-fluid" width="1817"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="data-sources" class="level2">
-<h2 class="anchored" data-anchor-id="data-sources">Data sources</h2>
-<ol type="1">
-<li>OpenStreetMap</li>
-<li>City of Gainesville open data</li>
-<li>GNV RideRTS API</li>
-</ol>
+<section id="world-equidistant-cylindrical" class="level2">
+<h2 class="anchored" data-anchor-id="world-equidistant-cylindrical">World Equidistant Cylindrical</h2>
+<p>Thirdly, this map shows the World Equidistant Cylindrical projection. As the name suggests, it preserves distances in the map.</p>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>tissot_map(<span class="dv">4087</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="34be524b" class="cell quarto-layout-panel" data-layout="[[100]]" data-execution_count="6">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="index_files/figure-html/cell-7-output-1.png" class="img-fluid" width="1844"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="workflow" class="level2">
-<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
-<ol type="1">
-<li>Generate 3D building models on the UF campus</li>
-</ol>
-<p>In the ArcGIS CityEngine, first, create a new project with a new scene. Then click file &gt; get map data, selecting the UF campus area. After that, align the downloaded 3D building models to the terrains. Finally, export the 3D building models into Esri Scene Layer Package (.slpk).</p>
-<ol start="2" type="1">
-<li>Download the JSON file from RTS API and convert it into Geojson</li>
-</ol>
-<p>Due to the API limitations, there is no command to return all the vehicles’ locations. To get around this, we need to create a python script to automate the multiple downloads and merge them into one file. In the “download_request_example.py”, I called the API four times to return different routes’ bus locations which together merged into one JSON that contains all the vehicle locations. Please note that each time I called the API, I filtered the JSON response from the API. Only after the proper filter, the JSON file’s structure is recognizable and convertible by the converter python script. Also, I created four artificial vehicle locations at the end of the JSON file which contains all four different occupancy levels of the buses, by doing this the legend in the later web app would always contain the four occupancy levels.</p>
-<p>Then we use the cmd to call the converter python script. Firstly, we set the directory to where the converter is located. Then we use the following code:</p>
-<p><code>call "%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy" Json2GeoJSON.py &lt;json file location&gt;</code></p>
-<p>After the first run, the converter python script would create an ini file alongside the JSON file you use as the input. The first conversion would likely be unsuccessful as the configuration in the ini file is just created and not manually corrected based on the input data. After the first conversion, correct the ini file to exactly the same as the gainData.ini.</p>
-<ol start="3" type="1">
-<li>Upload the models and layers to ArcGIS Online</li>
-</ol>
-<p>Get all the background layers like City of Gainesville roads, transit routes and stops from the city website’s open data portal. Upload all the background layers as well as the slpk file in step 1 and the Geojson file in step 2 to the ArcGIS online. Note: create a hosted feature layer for the Geojson file during the upload, as we will later constantly update it to make a real-time map.</p>
-<ol start="4" type="1">
-<li>Create a web scene and further use it to create a web app</li>
-</ol>
-<p>In ArcGIS Online, use the feature layers that have been uploaded to firstly create a web scene. Then create a web app using the web scene. Remember in the web scene setting to set the refresh time to the minimum, which will reduce the update interval in the ArcGIS server later.</p>
-<ol start="5" type="1">
-<li>Config constant upload bat file in a local computer</li>
-</ol>
-<p>Before updating the hosted feature layer that contains the vehicle information, we need to first store the ArcGIS authentication locally. Due to the UF Gatorlink using two-factor authentication to log in, it would be troublesome to simply store the username and password on the computer. The way to get around this is to first use the following python command in the ArcGIS Pro python environment:</p>
-<p><code>gis = arcgis.GIS(url=&lt;organization_arcgis_portal&gt;, username='', password='', profile='learn_user')</code></p>
-<p>This command would store your username and password in the learn_user profile, however, so far it cannot go through the ArcGIS Online portal yet. After this then, before updating the feature layer, call the following command in the ArcGIS Pro python environment while keeping ArcGIS Pro running in the background:</p>
-<p><code>gis = arcgis.GIS("pro", profile='learn_user')</code></p>
-<p>This command would use ArcGIS Pro to authenticate the profile called learn_user. Please note that use the same account you use in ArcGIS Online in ArcGIS Pro.</p>
-<p>Then we can update the hosted feature layer that contains all the vehicle locations by the following command in the ArcGIS Pro python environment:</p>
-<p><code>call "%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy" OverwriteFS.py learn_user &lt;ID&gt; &lt;Name&gt; &lt;location of your downloaded json file&gt;</code></p>
-<p>Note the ID and the name correspond to the upper right corner and the lower-left corner respectively.</p>
-<p><img src="../../images/IDandName.png" class="img-fluid"></p>
-<p>Finally, we can use the windows task scheduler to run the bat file every minute to automatically update the hosted feature layer. Or we can use the Invisible_mode_exxec.vbs to hiddenly execute the bat file. Please note that if you want to schedule a task to run the vbs, you need to use the following setting:</p>
-<p>Action: Start a program</p>
-<p>Program/script: <code>C:\Windows\System32\wscript.exe</code></p>
-<p>Add arguments (optional): <code>C:\Scripts\script.vbs</code></p>
+<section id="equal-area-projection" class="level2">
+<h2 class="anchored" data-anchor-id="equal-area-projection">Equal Area Projection</h2>
+<p>This map uses an equal area projection, centred around Europe and Africa, which preserves area size.</p>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a>tissot_map(<span class="dv">8857</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="bacac566" class="cell quarto-layout-panel" data-layout="[[100]]" data-execution_count="7">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="index_files/figure-html/cell-8-output-1.png" class="img-fluid" width="1817"></p>
+</div>
+</div>
+</div>
 </section>
-<section id="helpful-reminder" class="level2">
-<h2 class="anchored" data-anchor-id="helpful-reminder">Helpful reminder</h2>
-<p>How to run python code in ArcGIS Pro python environment outside of ArcGIS Pro software?</p>
-<ol type="1">
-<li>Use the python command prompt</li>
-<li>Use cmd while using the following command before every python code</li>
-</ol>
-<p>call <code>%PROGRAMFILES%\ArcGIS\Pro\bin\Python\Scripts\propy</code></p>
-</section>
-<section id="example-or-complementary-codes-or-files-included" class="level2">
-<h2 class="anchored" data-anchor-id="example-or-complementary-codes-or-files-included">Example or complementary codes or files included</h2>
-<p>Please note that all the example codes are not working at their original state as some parameters are left blank in them.</p>
-<ol type="1">
-<li><code>Auth_arcgis_locally.py</code>: Python scripts introduced in step 5 to store authentication locally.</li>
-<li><code>Auto_update_example.bat</code>: Bat file used at the end to automatically run multiple python files to update the hosted feature layer.</li>
-<li><code>DeveloperAPIGuides3_0.pdf</code>: API manual provided by the GNV RTS API. Please note that the commercial web link that can access the API is: "riderts.app".</li>
-<li><code>Download_request_example.py</code>: Python script to download all the bus locations with four artificial buses of four different occupancy levels and convert it into Geojson.</li>
-<li><code>gainData.ini</code>: configuration file that is used in the converter to help correctly convert the downloaded JSON file into proper Geojson.</li>
-<li><code>Invisible_mode_exxec.vbs</code>: Vbs file that used to execute <code>auto_update_example.bat</code> hiddenly (i.e., without any pop-up windows)</li>
-<li><code>OverwriteFS.zip</code>: Multiple python scripts provided by Esri. We only need to use the Json2GeoJSON.py and OverwriteFS.py inside. However, some functions inside are dependent on each other. Please unzip before use, don’t change the folder structure and don’t delete unused files inside.</li>
-</ol>
-<p>You can find them through this <a href="https://github.com/zehuiyin/digital_twin_UF_workflow">link</a>.</p>
-</section>
-<section id="reference" class="level2">
-<h2 class="anchored" data-anchor-id="reference">Reference</h2>
-<ol type="1">
-<li>Esri_livefeeds. (2022). Overwrite Hosted Feature Services, v2.1.2. ArcGIS. <a href="https://www.arcgis.com/home/item.html?id=d45f80eb53c748e7aa3d938a46b48836">https://www.arcgis.com/home/item.html?id=d45f80eb53c748e7aa3d938a46b48836</a></li>
-<li>Gonzalo Espinoza. (2022). Schedule automated near real-time data updates. Learn ArcGIS. <a href="https://learn.arcgis.com/en/projects/schedule-automated-near-real-time-data-updates/">https://learn.arcgis.com/en/projects/schedule-automated-near-real-time-data-updates/</a></li>
-</ol>
+<section id="plate-carrée-projection" class="level2">
+<h2 class="anchored" data-anchor-id="plate-carrée-projection">Plate Carrée Projection</h2>
+<p>This map uses the Plate Carrée projection, a compromise projection that balances distortions in different characteristics rather than preserving any single feature.</p>
+<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a>tissot_map(<span class="dv">32662</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="c5dc93b9" class="cell quarto-layout-panel" data-layout="[[100]]" data-execution_count="8">
+<div class="quarto-layout-row">
+<div class="quarto-layout-cell" style="flex-basis: 100.0%;justify-content: center;">
+<p><img src="index_files/figure-html/cell-9-output-1.png" class="img-fluid" width="1844"></p>
+</div>
+</div>
+</div>
 
 
+</section>
 </section>
 
 </main> <!-- /main -->
