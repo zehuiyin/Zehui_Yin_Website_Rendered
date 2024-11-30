@@ -9,7 +9,7 @@
 <link>https://zehuiyin.github.io/data_analysis.html</link>
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto.</description>
-<generator>quarto-1.5.57</generator>
+<generator>quarto-1.6.39</generator>
 <lastBuildDate>Wed, 10 Apr 2024 04:00:00 GMT</lastBuildDate>
 <item>
   <title>How Close is Too Close? Exploring the Relationship Between Bike Theft and Police Facility Distance in Toronto</title>
