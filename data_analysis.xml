@@ -10,7 +10,50 @@
 <atom:link href="https://zehuiyin.github.io/data_analysis.xml" rel="self" type="application/rss+xml"/>
 <description>This is Zehui Yin&#39;s personal website. He updates it regularly to post some of his selected projects and latest CV. The website is built with Quarto.</description>
 <generator>quarto-1.6.39</generator>
-<lastBuildDate>Wed, 10 Apr 2024 04:00:00 GMT</lastBuildDate>
+<lastBuildDate>Fri, 06 Dec 2024 05:00:00 GMT</lastBuildDate>
+<item>
+  <title>Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario</title>
+  <dc:creator>Zehui Yin</dc:creator>
+  <link>https://zehuiyin.github.io/data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/</link>
+  <description><![CDATA[ 
+
+
+
+
+<p><img src="https://zehuiyin.github.io/data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/thumbnail.png" class="preview-image img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Abstract:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Grocery stores play a crucial role, especially for urban residents, as they provide essential daily food supplies. The locations of grocery stores are not randomly chosen but are the result of detailed decision-making processes by grocery companies. Understanding the locations these grocers choose to establish themselves is important for public health and urban planning, as geographic access to grocery stores impacts personal health. In this paper, I utilize open data to examine grocery store locations in Hamilton, Ontario, as a case study. A zero-inflated negative binomial regression model with spatial lagged terms is fitted and estimated using maximum likelihood methods. I identified noticeable spatial patterns in grocery store locations. Grocery stores tend to cluster in nearby dissemination areas, but when there are too many grocery stores, they tend to disperse. The number of grocery stores is also significantly associated with population density, dissemination area size, the percentage of residents who do not speak an official language at home, those living in single detached houses, and the distance to Hamilton downtown.</p>
+</div>
+</div>
+<p>This project addresses the following research question:</p>
+<ul>
+<li>What areas in Hamilton have more or fewer grocery stores compared to other areas?</li>
+</ul>
+<p>You can find the code used in this project by clicking <a href="https://github.com/zehuiyin/grocery_store_hamilton">here</a>, and the data used in this project packaged into an R package <a href="https://github.com/zehuiyin/GroceryStoreHamiltonData">here</a>.</p>
+<embed src="../../files/grocery_store_hamilton.pdf" width="100%" height="800px">
+<p style="text-align: left;">
+If the embedded PDF is not displayed properly, <a href="../../files/grocery_store_hamilton.pdf" target="_blank">please click here.</a>
+</p>
+
+
+
+ ]]></description>
+  <category>Hamilton</category>
+  <category>Grocery store</category>
+  <category>Linear regression</category>
+  <category>R package</category>
+  <guid>https://zehuiyin.github.io/data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/</guid>
+  <pubDate>Fri, 06 Dec 2024 05:00:00 GMT</pubDate>
+</item>
 <item>
   <title>How Close is Too Close? Exploring the Relationship Between Bike Theft and Police Facility Distance in Toronto</title>
   <dc:creator>Zehui Yin</dc:creator>
@@ -677,7 +720,8 @@ font-style: inherit;">"entropy"</span>)</span></code></pre></div>
 </section>
 
  ]]></description>
-  <category>R Package</category>
+  <category>R package</category>
+  <category>Spatial analysis</category>
   <guid>https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/</guid>
   <pubDate>Sat, 02 Dec 2023 05:00:00 GMT</pubDate>
   <media:content url="https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/thumbnail.png" medium="image" type="image/png" height="70" width="144"/>

@@ -6,8 +6,11 @@
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
+<meta name="author" content="Zehui Yin">
+<meta name="dcterms.date" content="2024-12-06">
+<meta name="description" content="This is the final project for the course GEOG 712 Reproducible Research Workflow with GitHub and R at McMaster University in Fall 2024 supervised by Dr.&nbsp;Antonio Paez.">
 
-<title>Data Analysis  – Zehui Yin's Personal Websites</title>
+<title>Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario – Zehui Yin’s Personal Websites</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -23,31 +26,29 @@ ul.task-list li input[type="checkbox"] {
 </style>
 
 
-<script src="site_libs/quarto-nav/quarto-nav.js"></script>
-<script src="site_libs/quarto-nav/headroom.min.js"></script>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
-<script src="site_libs/quarto-search/autocomplete.umd.js"></script>
-<script src="site_libs/quarto-search/fuse.min.js"></script>
-<script src="site_libs/quarto-search/quarto-search.js"></script>
-<meta name="quarto:offset" content="./">
-<link href="./images/favicon.ico" rel="icon">
-<script src="site_libs/quarto-listing/list.min.js"></script>
-<script src="site_libs/quarto-listing/quarto-listing.js"></script>
-<script src="site_libs/cookie-consent/cookie-consent.js"></script>
-<link href="site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
-<script src="site_libs/quarto-html/quarto.js"></script>
-<script src="site_libs/quarto-html/popper.min.js"></script>
-<script src="site_libs/quarto-html/tippy.umd.min.js"></script>
-<script src="site_libs/quarto-html/anchor.min.js"></script>
-<link href="site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
-<link href="site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
-<script src="site_libs/bootstrap/bootstrap.min.js"></script>
-<link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-53c3e1fa1a1e870559c27668da30ec4e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
-<link href="site_libs/bootstrap/bootstrap-dark-fb2d9f1bd06af04f240f8aea3837da3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
-<link href="site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
+<script src="../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../">
+<link href="../../images/favicon.ico" rel="icon">
+<script src="../../site_libs/cookie-consent/cookie-consent.js"></script>
+<link href="../../site_libs/cookie-consent/cookie-consent.css" rel="stylesheet">
+<script src="../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-e26003cea8cd680ca0c55a263523d882.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-text-highlighting-styles">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark-d166b450ba5a8e9f7a0ab969bf6592c1.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
+<script src="../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../site_libs/bootstrap/bootstrap-53c3e1fa1a1e870559c27668da30ec4e.min.css" rel="stylesheet" append-hash="true" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="../../site_libs/bootstrap/bootstrap-dark-fb2d9f1bd06af04f240f8aea3837da3a.min.css" rel="prefetch" append-hash="true" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/all.css" rel="stylesheet">
+<link href="../../site_libs/quarto-contrib/fontawesome6-0.1.0/latex-fontsize.css" rel="stylesheet">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -75,35 +76,6 @@ ul.task-list li input[type="checkbox"] {
     "search-label": "Search"
   }
 }</script>
-<script>
-
-  window.document.addEventListener("DOMContentLoaded", function (_event) {
-    const listingTargetEl = window.document.querySelector('#listing-listing .list');
-    if (!listingTargetEl) {
-      // No listing discovered, do not attach.
-      return; 
-    }
-
-    const options = {
-      valueNames: ['listing-date','listing-title','listing-description','listing-categories','listing-image',{ data: ['index'] },{ data: ['categories'] },{ data: ['listing-date-sort'] },{ data: ['listing-file-modified-sort'] }],
-      
-      searchColumns: ["listing-date","listing-title","listing-author","listing-image","listing-description","listing-categories"],
-    };
-
-    window['quarto-listings'] = window['quarto-listings'] || {};
-    window['quarto-listings']['listing-listing'] = new List('listing-listing', options);
-
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  });
-
-  window.addEventListener('hashchange',() => {
-    if (window['quarto-listing-loaded']) {
-      window['quarto-listing-loaded']();
-    }
-  })
-  </script>
 <script async="" src="https://www.googletagmanager.com/gtag/js?id=G-RG5B7DX32S"></script>
 
 <script type="text/plain" cookie-consent="tracking">
@@ -170,47 +142,20 @@ if (localStorage.getItem("not_first_load") === null) {
 }
 </script>
 
-  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
 
-<script type="text/javascript">
-const typesetMath = (el) => {
-  if (window.MathJax) {
-    // MathJax Typeset
-    window.MathJax.typeset([el]);
-  } else if (window.katex) {
-    // KaTeX Render
-    var mathElements = el.getElementsByClassName("math");
-    var macros = [];
-    for (var i = 0; i < mathElements.length; i++) {
-      var texText = mathElements[i].firstChild;
-      if (mathElements[i].tagName == "SPAN") {
-        window.katex.render(texText.data, mathElements[i], {
-          displayMode: mathElements[i].classList.contains('display'),
-          throwOnError: false,
-          macros: macros,
-          fleqn: false
-        });
-      }
-    }
-  }
-}
-window.Quarto = {
-  typesetMath
-};
-</script>
-
-<link rel="stylesheet" href="styles.css">
-<link rel="alternate" type="application/rss+xml" title="Zehui Yin's Personal Websites" href="data_analysis.xml" data-external="1"><meta property="og:title" content="Data Analysis  – Zehui Yin’s Personal Websites">
-<meta property="og:image" content="https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/thumbnail.png">
+<link rel="stylesheet" href="../../styles.css">
+<meta property="og:title" content="Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario – Zehui Yin’s Personal Websites">
+<meta property="og:description" content="This is the final project for the course GEOG 712 Reproducible Research Workflow with GitHub and R at McMaster University in Fall 2024 supervised by Dr.&nbsp;Antonio Paez.">
+<meta property="og:image" content="https://zehuiyin.github.io/data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/thumbnail.png">
 <meta property="og:site_name" content="Zehui Yin's Personal Websites">
-<meta property="og:image:height" content="462">
-<meta property="og:image:width" content="948">
-<meta name="twitter:title" content="Data Analysis  – Zehui Yin’s Personal Websites">
-<meta name="twitter:image" content="https://zehuiyin.github.io/data_analysis/2023-12-02-package-sifr/thumbnail.png">
+<meta property="og:image:height" content="1443">
+<meta property="og:image:width" content="3140">
+<meta name="twitter:title" content="Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario – Zehui Yin’s Personal Websites">
+<meta name="twitter:description" content="This is the final project for the course GEOG 712 Reproducible Research Workflow with GitHub and R at McMaster University in Fall 2024 supervised by Dr.&nbsp;Antonio Paez.">
+<meta name="twitter:image" content="https://zehuiyin.github.io/data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/thumbnail.png">
 <meta name="twitter:site" content="@zehuiyin">
-<meta name="twitter:image-height" content="462">
-<meta name="twitter:image-width" content="948">
+<meta name="twitter:image-height" content="1443">
+<meta name="twitter:image-width" content="3140">
 <meta name="twitter:card" content="summary_large_image">
 </head>
 
@@ -221,7 +166,7 @@ window.Quarto = {
     <nav class="navbar navbar-expand-lg " data-bs-theme="dark">
       <div class="navbar-container container-fluid">
       <div class="navbar-brand-container mx-auto">
-    <a class="navbar-brand" href="./index.html">
+    <a class="navbar-brand" href="../../index.html">
     <span class="navbar-title"><strong>Zehui Yin</strong> | 殷泽辉</span>
     </a>
   </div>
@@ -286,7 +231,7 @@ window.Quarto = {
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
         <a class="flex-grow-1 no-decor" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
-          <h1 class="quarto-secondary-nav-title">Data Analysis <a href="./data_analysis.xml"><i class="fa-solid fa-rss" aria-label="rss"></i></a></h1>
+          <h1 class="quarto-secondary-nav-title">Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario</h1>
         </a>     
     </div>
   </nav>
@@ -308,13 +253,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-1" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./index.html" class="sidebar-item-text sidebar-link">
+  <a href="../../index.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">About Me</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./CV.html" class="sidebar-item-text sidebar-link">
+  <a href="../../CV.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Curriculum Vitae</span></a>
   </div>
 </li>
@@ -331,13 +276,13 @@ window.Quarto = {
       <ul id="quarto-sidebar-section-2" class="collapse list-unstyled sidebar-section depth1 show">  
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_analysis.html" class="sidebar-item-text sidebar-link active">
+  <a href="../../data_analysis.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Analysis</span></a>
   </div>
 </li>
           <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./data_visualization.html" class="sidebar-item-text sidebar-link">
+  <a href="../../data_visualization.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Data Visualization</span></a>
   </div>
 </li>
@@ -345,7 +290,7 @@ window.Quarto = {
   </li>
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
-  <a href="./research.html" class="sidebar-item-text sidebar-link">
+  <a href="../../research.html" class="sidebar-item-text sidebar-link">
  <span class="menu-text">Research</span></a>
   </div>
 </li>
@@ -354,22 +299,45 @@ window.Quarto = {
 </nav>
 <div id="quarto-sidebar-glass" class="quarto-sidebar-collapse-item" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item"></div>
 <!-- margin-sidebar -->
-    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar zindex-bottom">
         
-    <h5 class="quarto-listing-category-title">Categories</h5><div class="quarto-listing-category category-default"><div class="category" data-category="">All <span class="quarto-category-count">(9)</span></div><div class="category" data-category="QmlrZXNoYXJl">Bikeshare <span class="quarto-category-count">(3)</span></div><div class="category" data-category="Q2x1c3RlciUyMGFuYWx5c2lz">Cluster analysis <span class="quarto-category-count">(1)</span></div><div class="category" data-category="Q3JpbWU=">Crime <span class="quarto-category-count">(1)</span></div><div class="category" data-category="RGlzY3JldGUlMjBjaG9pY2U=">Discrete choice <span class="quarto-category-count">(1)</span></div><div class="category" data-category="R3JvY2VyeSUyMHN0b3Jl">Grocery store <span class="quarto-category-count">(1)</span></div><div class="category" data-category="SGFtaWx0b24=">Hamilton <span class="quarto-category-count">(1)</span></div><div class="category" data-category="TGluZWFyJTIwcmVncmVzc2lvbg==">Linear regression <span class="quarto-category-count">(4)</span></div><div class="category" data-category="UiUyMHBhY2thZ2U=">R package <span class="quarto-category-count">(2)</span></div><div class="category" data-category="Um91dGluZw==">Routing <span class="quarto-category-count">(1)</span></div><div class="category" data-category="U2ltdWxhdGlvbg==">Simulation <span class="quarto-category-count">(2)</span></div><div class="category" data-category="U3BhdGlhbCUyMGFuYWx5c2lz">Spatial analysis <span class="quarto-category-count">(4)</span></div><div class="category" data-category="VG9yb250bw==">Toronto <span class="quarto-category-count">(4)</span></div></div></div>
+    </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title d-none d-lg-block">Data Analysis <a href="./data_analysis.xml"><i class="fa-solid fa-rss" aria-label="rss"></i></a></h1>
-</div>
+<h1 class="title d-none d-lg-block">Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario</h1>
+  <div class="quarto-categories">
+    <div class="quarto-category">Hamilton</div>
+    <div class="quarto-category">Grocery store</div>
+    <div class="quarto-category">Linear regression</div>
+    <div class="quarto-category">R package</div>
+  </div>
+  </div>
 
+<div>
+  <div class="description">
+    This is the final project for the course <a href="https://academiccalendars.romcmaster.ca/preview_course.php?catoid=55&amp;coid=274877">GEOG 712 Reproducible Research Workflow with GitHub and R</a> at McMaster University in Fall 2024 supervised by <a href="https://experts.mcmaster.ca/display/paezha">Dr.&nbsp;Antonio Paez</a>.
+  </div>
+</div>
 
 
 <div class="quarto-title-meta">
 
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Zehui Yin </p>
+          </div>
+  </div>
     
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">December 6, 2024</p>
+    </div>
+  </div>
   
     
   </div>
@@ -379,357 +347,33 @@ window.Quarto = {
 </header>
 
 
+<p><img src="./thumbnail.png" class="preview-image img-fluid"></p>
+<div class="callout callout-style-default callout-note callout-titled">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-title-container flex-fill">
+Abstract:
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>Grocery stores play a crucial role, especially for urban residents, as they provide essential daily food supplies. The locations of grocery stores are not randomly chosen but are the result of detailed decision-making processes by grocery companies. Understanding the locations these grocers choose to establish themselves is important for public health and urban planning, as geographic access to grocery stores impacts personal health. In this paper, I utilize open data to examine grocery store locations in Hamilton, Ontario, as a case study. A zero-inflated negative binomial regression model with spatial lagged terms is fitted and estimated using maximum likelihood methods. I identified noticeable spatial patterns in grocery store locations. Grocery stores tend to cluster in nearby dissemination areas, but when there are too many grocery stores, they tend to disperse. The number of grocery stores is also significantly associated with population density, dissemination area size, the percentage of residents who do not speak an official language at home, those living in single detached houses, and the distance to Hamilton downtown.</p>
+</div>
+</div>
+<p>This project addresses the following research question:</p>
+<ul>
+<li>What areas in Hamilton have more or fewer grocery stores compared to other areas?</li>
+</ul>
+<p>You can find the code used in this project by clicking <a href="https://github.com/zehuiyin/grocery_store_hamilton">here</a>, and the data used in this project packaged into an R package <a href="https://github.com/zehuiyin/GroceryStoreHamiltonData">here</a>.</p>
+<embed src="../../files/grocery_store_hamilton.pdf" width="100%" height="800px">
+<p style="text-align: left;">
+If the embedded PDF is not displayed properly, <a href="../../files/grocery_store_hamilton.pdf" target="_blank">please click here.</a>
+</p>
 
 
 
-
-<div class="quarto-listing quarto-listing-container-default" id="listing-listing">
-<div class="listing-actions-group">
-   <div class="input-group input-group-sm quarto-listing-sort">
-     <span class="input-group-text"><i class="bi bi-sort-down"></i></span>
-     <select id="listing-listing-sort" class="form-select" aria-label="Order By" onchange="window['quarto-listings']['listing-listing'].sort(this.options[this.selectedIndex].value, { order: this.options[this.selectedIndex].getAttribute('data-direction')})">
-       <option value="" disabled="" selected="" hidden="">Order By</option>
-       <option value="index" data-direction="asc">Default</option>
-         <option value="listing-title" data-direction="asc">
-          Title
-        </option>
-         <option value="listing-date-sort" data-direction="asc">
-          Date - Oldest
-        </option>
-         <option value="listing-date-sort" data-direction="desc">
-          Date - Newest
-        </option>
-     </select>
-  </div>
-    <div class="input-group input-group-sm quarto-listing-filter">
-      <span class="input-group-text"><i class="bi bi-search"></i></span>
-      <input type="text" class="search form-control" placeholder="Filter">
-    </div>
-</div>
-<div class="list quarto-listing-default">
-<div class="quarto-post image-right" data-index="0" data-categories="SGFtaWx0b24lMkNHcm9jZXJ5JTIwc3RvcmUlMkNMaW5lYXIlMjByZWdyZXNzaW9uJTJDUiUyMHBhY2thZ2U=" data-listing-date-sort="1733461200000" data-listing-file-modified-sort="1733518443682" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="233">
-<div class="thumbnail">
-<p><a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external"></a></p><a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external">
-<p class="card-img-top"><img src="data_analysis\2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario\thumbnail.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external">Food Deserts or Food Oases? Predicting Grocery Store Locations in Hamilton, Ontario</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('SGFtaWx0b24='); return false;">
-Hamilton
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('R3JvY2VyeSUyMHN0b3Jl'); return false;">
-Grocery store
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwcmVncmVzc2lvbg=='); return false;">
-Linear regression
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('UiUyMHBhY2thZ2U='); return false;">
-R package
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external">This is the final project for the course <span>GEOG 712 Reproducible Research Workflow with GitHub and R</span> at McMaster University in Fall 2024 supervised by <span>Dr.&nbsp;Antonio Paez</span>.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2024-12-06-Food-Deserts-or-Food-Oases-Predicting-Grocery-Store-Locations-in-Hamilton-Ontario/index.html" class="no-external">
-<div class="listing-date">
-Dec 6, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="1" data-categories="VG9yb250byUyQ0NyaW1lJTJDTGluZWFyJTIwcmVncmVzc2lvbg==" data-listing-date-sort="1712721600000" data-listing-file-modified-sort="1727724914037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="279">
-<div class="thumbnail">
-<p><a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external"></a></p><a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external">
-<p class="card-img-top"><img src="data_analysis\2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto\thumbnail.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external">How Close is Too Close? Exploring the Relationship Between Bike Theft and Police Facility Distance in Toronto</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VG9yb250bw=='); return false;">
-Toronto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q3JpbWU='); return false;">
-Crime
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwcmVncmVzc2lvbg=='); return false;">
-Linear regression
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external">This is the final project for the course <span>SOCC70H3: Models of the Social World</span> at the University of Toronto Scarborough in Winter 2024 supervised by <span>Prof.&nbsp;Ethan Fosse</span>.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2024-04-10-How-Close-is-Too-Close-Exploring-the-Relationship-Between-Bike-Theft-and-Police-Facility-Distance-in-Toronto/index.html" class="no-external">
-<div class="listing-date">
-Apr 10, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="2" data-categories="VG9yb250byUyQ0Jpa2VzaGFyZSUyQ1NwYXRpYWwlMjBhbmFseXNpcw==" data-listing-date-sort="1711857600000" data-listing-file-modified-sort="1727724914037" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="304">
-<div class="thumbnail">
-<p><a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external"></a></p><a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external">
-<p class="card-img-top"><img src="https://zehuiyin.github.io/bikeshareTO_equity_analysis/Graphs/Workflow.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external">Toward Equitable Service Provision: A Catchment Area Analysis of The Bike Share Toronto System</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VG9yb250bw=='); return false;">
-Toronto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QmlrZXNoYXJl'); return false;">
-Bikeshare
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMGFuYWx5c2lz'); return false;">
-Spatial analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external">This project was completed for the course <span>GGRD30H3: GIS Research Project</span> at the University of Toronto Scarborough in Winter 2024 supervised by <span>Dr.&nbsp;Glenn Brauen</span>.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2024-03-31-Toward-Equitable-Service-Provision-A-Catchment-Area-Analysis-of-The-Bike-Share-Toronto-System/index.html" class="no-external">
-<div class="listing-date">
-Mar 31, 2024
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="3" data-categories="UiUyMHBhY2thZ2UlMkNTcGF0aWFsJTIwYW5hbHlzaXM=" data-listing-date-sort="1701493200000" data-listing-file-modified-sort="1733518472677" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="677">
-<div class="thumbnail">
-<p><a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external"></a></p><a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external">
-<p><img loading="lazy" src="./data_analysis/2023-12-02-package-sifr/thumbnail.png" class="thumbnail-image"></p>
-</a><p><a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external">R Package <em>sifr</em></a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('UiUyMHBhY2thZ2U='); return false;">
-R package
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMGFuYWx5c2lz'); return false;">
-Spatial analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external">I developed an R Package <em>sifr</em> for conducting basic spatial interpolation and calculating land-use entropy. You can download <em>sifr</em> from GitHub and install it in your R environment.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2023-12-02-package-sifr/index.html" class="no-external">
-<div class="listing-date">
-Dec 2, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="4" data-categories="U2ltdWxhdGlvbiUyQ0xpbmVhciUyMHJlZ3Jlc3Npb24=" data-listing-date-sort="1700197200000" data-listing-file-modified-sort="1727724914034" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="4" data-listing-word-count-sort="800">
-<div class="thumbnail">
-<p><a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external"></a></p><a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external">
-<p class="card-img-top"><img src="data_analysis\2023-11-17-Time-Series-OLS-Estimation-Bias\index_files\figure-html\unnamed-chunk-3-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external">Time-Series OLS Estimation Bias</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U2ltdWxhdGlvbg=='); return false;">
-Simulation
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwcmVncmVzc2lvbg=='); return false;">
-Linear regression
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external">This project involved simulating the bias in ordinary least squares (OLS) estimation on time series data when it follows an autoregressive process of order one (AR(1)).</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2023-11-17-Time-Series-OLS-Estimation-Bias/index.html" class="no-external">
-<div class="listing-date">
-Nov 17, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="5" data-categories="VG9yb250byUyQ0Jpa2VzaGFyZSUyQ1NwYXRpYWwlMjBhbmFseXNpcyUyQ1JvdXRpbmc=" data-listing-date-sort="1682049600000" data-listing-file-modified-sort="1727724914033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="203">
-<div class="thumbnail">
-<p><a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external"></a></p><a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external">
-<p class="card-img-top"><img src="images\GGRC32_routing_workflow.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external">Travel Speed and Routes of the Bike-share System: An Analysis of Bike Share Toronto</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VG9yb250bw=='); return false;">
-Toronto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QmlrZXNoYXJl'); return false;">
-Bikeshare
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMGFuYWx5c2lz'); return false;">
-Spatial analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Um91dGluZw=='); return false;">
-Routing
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external">This project was a part of GGRC32, an essential spatial analysis course taught by Dr.&nbsp;Christopher D. Higgins in Winter 2023. It examined the Bike Share Toronto system and…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2023-04-21-Travel-speed-and-routes-of-the-bike-share-system-An-analysis-of-Bike-Share-Toronto/index.html" class="no-external">
-<div class="listing-date">
-Apr 21, 2023
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="6" data-categories="VG9yb250byUyQ0Jpa2VzaGFyZSUyQ1NwYXRpYWwlMjBhbmFseXNpcyUyQ0NsdXN0ZXIlMjBhbmFseXNpcw==" data-listing-date-sort="1670907600000" data-listing-file-modified-sort="1727724914033" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="2" data-listing-word-count-sort="254">
-<div class="thumbnail">
-<p><a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external"></a></p><a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external">
-<p class="card-img-top"><img src="images\GGRC30_workflow_chart.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external">Spatial Patterns of Seasonal Ridership, Built Environment and Social Demographics: A Taxonomy of Bike Share Toronto Stations</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('VG9yb250bw=='); return false;">
-Toronto
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('QmlrZXNoYXJl'); return false;">
-Bikeshare
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('U3BhdGlhbCUyMGFuYWx5c2lz'); return false;">
-Spatial analysis
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('Q2x1c3RlciUyMGFuYWx5c2lz'); return false;">
-Cluster analysis
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external">This project was completed as part of an advanced GIS course, GGRC30, taught by Dr.&nbsp;Elnaz Yousefzadeh Barri in the Fall of 2022. The project focused on the Bike Share…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2022-12-13-Spatial-patterns-of-seasonal-ridership,-built-enviroument-and-social-demographics-A-taxonomy-of-Bike-Share-Toronto-stations/index.html" class="no-external">
-<div class="listing-date">
-Dec 13, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="7" data-categories="U2ltdWxhdGlvbg==" data-listing-date-sort="1665806400000" data-listing-file-modified-sort="1727724914032" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="7" data-listing-word-count-sort="1353">
-<div class="thumbnail">
-<p><a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external"></a></p><a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external">
-<p class="card-img-top"><img src="data_analysis\2022-10-15-Semicircle-Problem-with-Simulation\index_files\figure-html\unnamed-chunk-2-1.png"  class="thumbnail-image card-img"/></p>
-</a><p><a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external">Semicircle Problem with Simulation</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('U2ltdWxhdGlvbg=='); return false;">
-Simulation
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external">This project involved simulating a scenario where four ducks were randomly and independently located in a circular pond. The goal was to determine the probability that all four ducks would be located within the same half of the circle.</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2022-10-15-Semicircle-Problem-with-Simulation/index.html" class="no-external">
-<div class="listing-date">
-Oct 15, 2022
-</div>
-</a>
-</div>
-</div>
-<div class="quarto-post image-right" data-index="8" data-categories="RGlzY3JldGUlMjBjaG9pY2UlMkNMaW5lYXIlMjByZWdyZXNzaW9u" data-listing-date-sort="1635912000000" data-listing-file-modified-sort="1727724914030" data-listing-date-modified-sort="NaN" data-listing-reading-time-sort="1" data-listing-word-count-sort="157">
-<div class="thumbnail">
-<p><a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external"></a></p><a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external">
-<p><img loading="lazy" src="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/thumbnail.png" class="thumbnail-image"></p>
-</a><p><a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external"></a></p>
-</div>
-<div class="body">
-<h3 class="no-anchor listing-title">
-<a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external">Binary and Multinomial Logistic Regression</a>
-</h3>
-<div class="listing-subtitle">
-<a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external"></a>
-</div>
-<div class="listing-categories">
-<div class="listing-category" onclick="window.quartoListingCategory('RGlzY3JldGUlMjBjaG9pY2U='); return false;">
-Discrete choice
-</div>
-<div class="listing-category" onclick="window.quartoListingCategory('TGluZWFyJTIwcmVncmVzc2lvbg=='); return false;">
-Linear regression
-</div>
-</div>
-<div class="listing-description">
-<a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external">This project was inspired by an assignment for GGRC42, a course taught by Dr.&nbsp;Steven Farber in the fall of 2021. The main focus of the project was to develop binary and…</a>
-</div>
-</div>
-<div class="metadata">
-<a href="./data_analysis/2021-11-03-Binary-and-Multinomial-Logistic-Regression/index.html" class="no-external">
-<div class="listing-date">
-Nov 3, 2021
-</div>
-</a>
-</div>
-</div>
-</div>
-<div class="listing-no-matching d-none">
-No matching items
-</div>
-</div></main> <!-- /main -->
+</main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
@@ -1291,6 +935,10 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
   }
 });
 </script>
+<script src="https://giscus.app/client.js" data-repo="zehuiyin/zehuiyin.github.io" data-repo-id="R_kgDOKVxrzA" data-category="Announcements" data-category-id="DIC_kwDOKVxrzM4Ccs4G" data-mapping="pathname" data-reactions-enabled="1" data-emit-metadata="0" data-input-position="top" data-theme="transparent_dark" data-lang="en" crossorigin="anonymous" data-loading="lazy" async="">
+</script>
+<input type="hidden" id="giscus-base-theme" value="transparent_dark">
+<input type="hidden" id="giscus-alt-theme" value="transparent_dark">
 </div> <!-- /content -->
 <footer class="footer">
   <div class="nav-footer">
